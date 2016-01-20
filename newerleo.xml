@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs title="Leonardo Feed" 
+    title_url="http://groups.google.com/group/Google-Gadgets-API" 
+    scrolling="true">
+  </ModulePrefs>
+  <UserPref name="num_entries" display_name="Number of Entries:" default_value="20"/>
+  <Content type="html">
+  <![CDATA[
+  <head>
+<style>
+a:link {
+    text-decoration: none;
+    color: #77797c;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #000099;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #77797c;
+}
+
+a:active {
+    text-decoration: underline;
+    color: #000099;
+}
+</style>
+</head>
+  <TABLE style="width:540px;">
+  <TR>
+  <TD id="cell10" style="font-family:verdana; font-weight: bold; color: #77797c; font-size:12px;vertical-align:top;text-align:left;">
+  </TD>
+  <TD id="cell20" style="font-family:verdana; font-weight: bold; color: #77797c; font-size:12px;vertical-align:top;text-align:left;">
+  </TD>
+  <TD id="cell30" style="font-family:verdana; color: #77797c; font-size:12px;vertical-align:top;text-align:right">
+  </TD>
+  </TR>
+  <TR>
+  <TD id="cell40">
+  </TD>
+  <TD id="cell50">
+  </TD>
+  <TD id="cell60">
+  </TD>
+  </TR>
+  <TR>
+  <TD id="cell11" style="font-family:verdana; font-weight: bold; color: #77797c; font-size:12px;vertical-align:top;text-align:left;">
+  </TD>
+  <TD id="cell21" style="font-family:verdana; font-weight: bold; color: #77797c; font-size:12px;vertical-align:top;text-align:left;">
+  </TD>
+  <TD id="cell31" style="font-family:verdana; color: #77797c; font-size:12px;vertical-align:top;text-align:right">
+  </TD>
+  </TR>
+  <TR>
+  <TD id="cell41">
+  </TD>
+  <TD id="cell51">
+  </TD>
+  <TD id="cell61">
+  </TD>
+  </TR>
+  <TR>
+  <TD id="cell12" style="font-family:verdana; font-weight: bold; color: #77797c; font-size:12px;vertical-align:top;text-align:left;">
+  </TD>
+  <TD id="cell22" style="font-family:verdana; font-weight: bold; color: #77797c; font-size:12px;vertical-align:top;text-align:left;">
+  </TD>
+  <TD id="cell32" style="font-family:verdana; color: #77797c; font-size:12px;vertical-align:top;text-align:right">
+  </TD>
+  </TR>
+  <TR>
+  <TD id="cell42">
+  </TD>
+  <TD id="cell52">
+  </TD>
+  <TD id="cell62">
+  </TD>
+  </TR>
+  <TR>
+  <TD id="cell13" style="font-family:verdana; font-weight: bold; color: #77797c; font-size:12px;vertical-align:top;text-align:left;">
+  </TD>
+  <TD id="cell23" style="font-family:verdana; font-weight: bold; color: #77797c; font-size:12px;vertical-align:top;text-align:left;">
+  </TD>
+  <TD id="cell33" style="font-family:verdana; color: #77797c; font-size:12px;vertical-align:top;text-align:right">
+  </TD>
+  </TR>
+  <TR>
+  <TD id="cell43">
+  </TD>
+  <TD id="cell53">
+  </TD>
+  <TD id="cell63">
+  </TD>
+  </TR>
+  <TR>
+  <TD id="cell14" style="font-family:verdana; font-weight: bold; color: #77797c; font-size:12px;vertical-align:top;text-align:left;">
+  </TD>
+  <TD id="cell24" style="font-family:verdana; font-weight: bold; color: #77797c; font-size:12px;vertical-align:top;text-align:left;">
+  </TD>
+  <TD id="cell34" style="font-family:verdana; color: #77797c; font-size:12px;vertical-align:top;text-align:right">
+  </TD>
+  </TR>
+  <TR>
+  <TD id="cell44">
+  </TD>
+  <TD id="cell54">
+  </TD>
+  <TD id="cell64">
+  </TD>
+  </TR>
+  <TR>
+  <TD id="cell15" style="font-family:verdana; font-weight: bold; color: #77797c; font-size:12px;vertical-align:top;text-align:left;">
+  </TD>
+  <TD id="cell25" style="font-family:verdana; font-weight: bold; color: #77797c; font-size:12px;vertical-align:top;text-align:left;">
+  </TD>
+  <TD id="cell35" style="font-family:verdana; color: #77797c; font-size:12px;vertical-align:top;text-align:right">
+  </TD>
+  </TR>
+  <TR>
+  <TD id="cell45">
+  </TD>
+  <TD id="cell55">
+  </TD>
+  <TD id="cell65">
+  </TD>
+  </TR>
+  <TR>
+  <TD id="cell16" style="font-family:verdana; font-weight: bold; color: #77797c; font-size:12px;vertical-align:top;text-align:left;">
+  </TD>
+  <TD id="cell26" style="font-family:verdana; font-weight: bold; color: #77797c; font-size:12px;vertical-align:top;text-align:left;">
+  </TD>
+  <TD id="cell36" style="font-family:verdana; color: #77797c; font-size:12px;vertical-align:top;text-align:right">
+  </TD>
+  </TR>
+  <TR>
+  <TD id="cell46">
+  </TD>
+  <TD id="cell56">
+  </TD>
+  <TD id="cell66">
+  </TD>
+  </TR>
+  <TR>
+  <TD id="cell17" style="font-family:verdana; font-weight: bold; color: #77797c; font-size:12px;vertical-align:top;text-align:left;">
+  </TD>
+  <TD id="cell27" style="font-family:verdana; font-weight: bold; color: #77797c; font-size:12px;vertical-align:top;text-align:left;">
+  </TD>
+  <TD id="cell37" style="font-family:verdana; color: #77797c; font-size:12px;vertical-align:top;text-align:right">
+  </TD>
+  </TR>
+  <TR>
+  <TD id="cell47">
+  </TD>
+  <TD id="cell57">
+  </TD>
+  <TD id="cell67">
+  </TD>
+  </TR>
+  <TR>
+  <TD style="font-family:verdana; color: #77797c; font-size:12px;vertical-align:top;text-align:right;" colspan="3">
+  <a target="_blank" href="http://www.paraglidingforum.com/leonardo/tracks/NZ/alltimes/brand:all,cat:0,class:all,xctype:all,club:all,pilot:0_0,takeoff:all">More Flights >></a>
+  </TD>
+  </TR>
+  </TABLE>
+
+  <script type="text/javascript">
+
+  // Get userprefs
+  var prefs = new gadgets.Prefs();
+  var entries = prefs.getInt("num_entries");
+
+  function getFeed() {  
+    var params = {};  
+    params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.FEED;  
+    params[gadgets.io.RequestParameters.NUM_ENTRIES] = new Number(entries);  
+    params[gadgets.io.RequestParameters.GET_SUMMARIES] = true; 
+    var url = "http://www.paraglidingforum.com/leonardo/rss.php?country=NZ&olcScore=0&c=0";  
+    gadgets.io.makeRequest(url, response, params);
+  };
+
+  function response(obj) { 
+    // obj.data contains the feed data
+    var feed = obj.data;
+    var html = "";
+    var flight = "";
+    var cell1 = "";
+    var cell2 = "";
+    var cell3 = "";
+    var cell4 = "";
+    var cell5 = "";
+    var cell6 = "";
+    var sorted = [];
+ 
+    // Access the data for a given entry
+    if (feed.Entry) {
+      for (var i = 0; i < feed.Entry.length; i++) {
+
+        flight = feed.Entry[i].Summary;    
+        
+        var descstrg1 = flight.replace(/"/g,' ');
+        var descstrg2 = descstrg1.replace('<','"');
+        var descstrg3 = descstrg2.replace('/>','"');
+        var descstrg4 = descstrg3.replace(/</g,',');
+        var descstrg5 = descstrg4.replace(/>/g,',');
+        var descstrg6 = descstrg5.replace(/=/g,' ');
+        var descstrg7 = descstrg6.replace(/=/g,' ');
+        var descstrg8 = descstrg7.replace(/&#039;/g,"'");
+ 
+        var descstrg = [];
+        descstrg[i] = descstrg8.split(",");
+
+        var frtst = descstrg[i][25];
+        var sts = descstrg[i][25].split(" ",3);
+        var strt = frtst.lastIndexOf(" ")+1;
+        var stnd = sts[2].lastIndexOf(":");
+        var t = frtst.slice(0,strt) + (Number(sts[2].slice(0,stnd))) + sts[2].slice(stnd);
+
+        var ddate = frtst.slice(0,11);
+        var dtstr = ddate.split("/");
+        var d = new Date(dtstr[2],dtstr[1],dtstr[0]);
+        var flnumtim = d.getTime();
+
+        sorted[i] = [flnumtim,descstrg[i][73],feed.Entry[i].Link,t,descstrg[i][35],descstrg[i][63],descstrg[i][7],descstrg[i][17],descstrg[i][93]];
+      };
+
+      sorted.sort(function(a, b)
+        {
+          return b[0]-a[0] || b[1]-a[1]
+        });
+
+      for (var i = 0; i < 8 ; i++) {
+        cell1 = "cell1" + i;
+        cell2 = "cell2" + i;
+        cell3 = "cell3" + i;
+        cell4 = "cell4" + i;
+        cell5 = "cell5" + i;
+        cell6 = "cell6" + i;
+
+
+        document.getElementById(cell1).innerHTML = "<a target='_blank' href='" + sorted[i][2] + "'><img style='height:12px;' src='http://www.paraglidingforum.com/leonardo/templates/basic/tpl/leonardo_logo.gif'>" + sorted[i][3] + "</a> ";
+        document.getElementById(cell2).textContent = sorted[i][4];
+        document.getElementById(cell3).textContent = "OLC: " + sorted[i][5];
+        document.getElementById(cell4).textContent = sorted[i][6];
+        document.getElementById(cell5).textContent = sorted[i][7];
+        document.getElementById(cell6).textContent = sorted[i][8];
+        document.getElementById(cell4).setAttribute("style","font-family:verdana; color: #77797c; font-size:12px;vertical-align:top;text-align:left;border-bottom:thin dotted;");
+        document.getElementById(cell5).setAttribute("style","font-family:verdana; color: #77797c; font-size:12px;vertical-align:top;text-align:left;border-bottom:thin dotted;");
+        document.getElementById(cell6).setAttribute("style","font-family:verdana; color: #77797c; font-size:12px;vertical-align:top;text-align:right;border-bottom:thin dotted;");
+
+      };
+    }        
+  };
+  gadgets.util.registerOnLoadHandler(getFeed);
+  </script>
+  ]]>
+  </Content>
+</Module>
