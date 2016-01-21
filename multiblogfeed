@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs title="Multi Notice Feed" 
+    title_url="http://groups.google.com/group/Google-Gadgets-API" 
+    scrolling="true">
+  </ModulePrefs>
+  <UserPref name="num_entries" display_name="Number of Entries:" default_value="9"/>
+  <Content type="html">
+  <![CDATA[
+  <head>
+<style>
+a:link {
+    text-decoration: none;
+    color: #77797c;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #000099;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #77797c;
+}
+
+a:active {
+    text-decoration: underline;
+    color: #000099;
+}
+</style>
+</head>
+<TABLE style="width:540px;">
+  <TR>
+  <TD id="cell1" style="font-family:verdana; font-size:14px; font-weight:bold;vertical-align:top;text-align:left;">
+  </TD>
+  <TD id="cell2" style="font-family:verdana; color: #77797c; font-size:12px;vertical-align:top;text-align:right;">
+  </TD>
+  </TR>
+  <TR>
+  <TD id="cell3" colspan="2">
+  </TD>
+  </TR>
+  <TR>
+  <TD id="cell4" style="font-family:verdana; font-size:14px; font-weight:bold;vertical-align:top;text-align:left;">
+  </TD>
+  <TD id="cell5" style="font-family:verdana; color: #77797c; font-size:12px;vertical-align:top;text-align:right;">
+  </TD>
+  </TR>
+  <TR>
+  <TD id="cell6" colspan="2">
+  </TD>
+  </TR>
+  <TR>
+  <TD id="cell7" style="font-family:verdana; font-size:14px; font-weight:bold;vertical-align:top;text-align:left;">
+  </TD>
+  <TD id="cell8" style="font-family:verdana; color: #77797c; font-size:12px;vertical-align:top;text-align:right;">
+  </TD>
+  </TR>
+  <TR>
+  <TD id="cell9" colspan="2">
+  </TD>
+  </TR>
+  <TR>
+  <TD id="cell10" style="font-family:verdana; font-size:14px; font-weight:bold;vertical-align:top;text-align:left;">
+  </TD>
+  <TD id="cell11" style="font-family:verdana; color: #77797c; font-size:12px;vertical-align:top;text-align:right;">
+  </TD>
+  </TR>
+  <TR>
+  <TD id="cell12" colspan="2">
+  </TD>
+  </TR>
+  <TR>
+  <TD id="cell13" style="font-family:verdana; font-size:14px; font-weight:bold;vertical-align:top;text-align:left;">
+  </TD>
+  <TD id="cell14" style="font-family:verdana; color: #77797c; font-size:12px;vertical-align:top;text-align:right;">
+  </TD>
+  </TR>
+  <TR>
+  <TD id="cell15" colspan="2">
+  </TD>
+  </TR>
+  <TR>
+  <TD id="cell16" style="font-family:verdana; font-size:14px; font-weight:bold;vertical-align:top;text-align:left;">
+  </TD>
+  <TD id="cell17" style="font-family:verdana; color: #77797c; font-size:12px;vertical-align:top;text-align:right;">
+  </TD>
+  </TR>
+  <TR>
+  <TD id="cell18" colspan="2">
+  </TD>
+  </TR>
+  <TR>
+  <TD id="cell19" style="font-family:verdana; font-size:14px; font-weight:bold;vertical-align:top;text-align:left;">
+  </TD>
+  <TD id="cell20" style="font-family:verdana; color: #77797c; font-size:12px;vertical-align:top;text-align:right;">
+  </TD>
+  </TR>
+  <TR>
+  <TD id="cell21" colspan="2">
+  </TD>
+  </TR>
+  <TR>
+  <TD id="cell22" style="font-family:verdana; font-size:14px; font-weight:bold;vertical-align:top;text-align:left;">
+  </TD>
+  <TD id="cell23" style="font-family:verdana; color: #77797c; font-size:12px;vertical-align:top;text-align:right;">
+  </TD>
+  </TR>
+  <TR>
+  <TD id="cell24" style="font-family:verdana; color: #77797c; font-size:12px;vertical-align:top;text-align:left;" colspan="2">
+  </TD>
+  </TR>
+  </TABLE>
+
+
+  <script type="text/javascript">
+
+  // Get userprefs
+  var prefs = new gadgets.Prefs();
+  var entries = prefs.getInt("num_entries");
+  var nzhgpa = "http://www.nzhgpa.org.nz/_/rsrc/1365502452864/config/customLogo.gif?revision=9";
+  var general = "http://www.nzhgpa.org.nz/_/rsrc/1365492572734/Home/events.gif";
+  var sites = "http://www.nzhgpa.org.nz/_/rsrc/1409903390562/Home/map.gif";
+  var combined = [];
+  var x = 0;
+
+  function getFeeds() {  
+    var params = {};  
+    params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.FEED;  
+    params[gadgets.io.RequestParameters.NUM_ENTRIES] = new Number(entries);  
+    params[gadgets.io.RequestParameters.GET_SUMMARIES] = true; 
+    var url1 = "http://feeds.feedburner.com/Nzhgpa-sitenotices";  
+    var url2 = "http://feeds.feedburner.com/Nzhgpa-generalnotices";  
+    var url3 = "http://feeds.feedburner.com/Nzhgpa-notices";  
+    gadgets.io.makeRequest(url1, response1, params);
+    gadgets.io.makeRequest(url2, response2, params);
+    gadgets.io.makeRequest(url3, response3, params);
+  };
+
+  function response1(obj1) { 
+    // obj.data contains the feed data
+    var feed1 = obj1.data;
+    
+    var title = "";
+    var link = "";
+    var itemdt = 0;
+    var summry = "";
+    var text = "";
+    var div = document.createElement("div");
+    if (feed1.Entry) {
+      for (var i = 0; i < feed1.Entry.length; i++) {
+        itmdt = feed1.Entry[i].Date;
+        title = feed1.Entry[i].Title;
+        link = feed1.Entry[i].Link;
+        summry = feed1.Entry[i].Summary;
+        div.innerHTML = summry;
+        text = div.textContent;
+        if (text.length > 140) {
+          text = text.slice(0,140)+ " …";
+        }
+        
+        combined[x] = [itmdt,sites,title,link,text];
+        x++;
+      }
+    }
+  };        
+
+  function response2(obj2) { 
+    // obj.data contains the feed data
+    var feed2 = obj2.data;
+    
+    var title = "";
+    var link = "";
+    var itemdt = 0;
+    var summry = "";
+    var text = "";
+    var div = document.createElement("div");
+    if (feed2.Entry) {
+      for (var i = 0; i < feed2.Entry.length; i++) {
+        itmdt = feed2.Entry[i].Date;
+        title = feed2.Entry[i].Title;
+        link = feed2.Entry[i].Link;
+        summry = feed2.Entry[i].Summary;
+        div.innerHTML = summry;
+        text = div.textContent;
+        if (text.length > 140) {
+          text = text.slice(0,140)+ " …";
+        }
+        
+        combined[x] = [itmdt,general,title,link,text];
+        x++;
+      }
+    }
+  };        
+
+  function response3(obj3) { 
+    // obj.data contains the feed data
+    var feed3 = obj3.data;
+    
+    var title = "";
+    var link = "";
+    var itemdt = 0;
+    var summry = "";
+    var text = "";
+    var div = document.createElement("div");
+    if (feed3.Entry) {
+      for (var i = 0; i < feed3.Entry.length; i++) {
+        itmdt = feed3.Entry[i].Date;
+        title = feed3.Entry[i].Title;
+        link = feed3.Entry[i].Link;
+        summry = feed3.Entry[i].Summary;
+        div.innerHTML = summry;
+        text = div.textContent;
+        if (text.length > 140) {
+          text = text.slice(0,140)+ " …";
+        }
+
+        combined[x] = [itmdt,nzhgpa,title,link,text];
+        x++;
+      }
+    }
+    displayfeeds();
+  };        
+  function displayfeeds() {  
+    var cella = "";  
+    var cellb = "";  
+    var cellc = "";  
+    var item = 1;  
+    var postDate = "";
+    combined.sort(function(a, b){return b[0]-a[0]});
+    for (var i = 0; i <  8; i++) {
+      cella = "cell" + (i+item);
+      item = item + 1;
+      cellb = "cell" + (i+item);
+      item = item + 1;
+      cellc = "cell" + (i+item);
+      postDate = new Date(combined[i][0]);
+    
+      document.getElementById(cella).innerHTML = '<a href="' + combined[i][3] + '" target="_top"><img src ="'+ combined[i][1] + '" height="14px">' + combined[i][2] + '</a>';
+      document.getElementById(cellb).textContent = postDate.toDateString();
+      document.getElementById(cellc).textContent = combined[i][4];
+      if (cellc != "cell24") {
+        document.getElementById(cellc).setAttribute("style", "font-family:verdana; color: #77797c; font-size:12px;vertical-align:top;text-align:left;border-bottom:thin dotted;");
+      }
+    }
+  };
+             
+  gadgets.util.registerOnLoadHandler(getFeeds);
+  
+
+ 
+
+  </script>
+  ]]>
+  </Content>
+</Module>
