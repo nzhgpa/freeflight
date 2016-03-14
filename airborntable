@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs title="Latest News" 
+    title_url="http://groups.google.com/group/Google-Gadgets-API" 
+    scrolling="true">
+  </ModulePrefs>
+  <UserPref name="num_entries" display_name="Number of Entries:" default_value="6"/>
+  <Content type="html">
+  <![CDATA[
+  <head>
+<style>
+a:link {
+    text-decoration: none;
+    color: #77797c;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #000099;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #77797c;
+}
+
+a:active {
+    text-decoration: underline;
+    color: #000099;
+}
+</style>
+</head>
+  <TABLE style="width:540px;">
+  <TR>
+  <TD id="cell10" style="font-family:verdana; font-weight: bold; color: #77797c; font-size:16px;vertical-align:top;text-align:left;">
+  </TD>
+  </TR>
+  <TR>
+  <TD id="cell20" style="font-family:verdana; color: #77797c; font-size:14px;vertical-align:top;text-align:left;height:205px;"><div id="div10" style="height:205px;overflow:hidden;"></div>
+  </TD>
+  </TR>
+  <TR>
+  <TD style="font-family:verdana; font-weight: bold; color: #77797c; font-size:10px; vertical-align:top;text-align:left;">Other recent headlines:
+  </TD>
+  <TR>
+  <TD id="cell11" style="font-family:verdana; font-weight: bold; color: #77797c; font-size:16px;vertical-align:top;text-align:left;">
+  </TD>
+  </TR>
+  <TR>
+  <TD id="cell12" style="font-family:verdana; font-weight: bold; color: #77797c; font-size:16px;vertical-align:top;text-align:left;">
+  </TD>
+  </TR>
+  <TR>
+  <TD id="cell13" style="font-family:verdana; font-weight: bold; color: #77797c; font-size:16px;vertical-align:top;text-align:left;">
+  </TD>
+  </TR>
+  <TR>
+  <TD id="cell14" style="font-family:verdana; font-weight: bold; color: #77797c; font-size:16px;vertical-align:top;text-align:left;">
+  </TD>
+  </TR>
+  <TR>
+  <TD id="cell15" style="font-family:verdana; font-weight: bold; color: #77797c; font-size:16px;vertical-align:top;text-align:left;">
+  </TD>
+  </TR>
+  </TABLE>
+
+
+  <script type="text/javascript">
+
+  // Get userprefs
+  var prefs = new gadgets.Prefs();
+  var entries = prefs.getInt("num_entries");
+
+  function getFeed() {  
+    var params = {};  
+    params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.FEED;  
+    params[gadgets.io.RequestParameters.NUM_ENTRIES] = new Number(entries);  
+    params[gadgets.io.RequestParameters.GET_SUMMARIES] = true; 
+    var url = "https://docs.google.com/spreadsheets/d/1l2twbdkZArJEb0v1b-FIwySD0iAXsylBMJSgjpLwy1A/pubhtml?gid=0&single=true";  
+    gadgets.io.makeRequest(url, response, params);
+  };
+
+  function response(obj) { 
+    // obj.data contains the feed data
+    var feed = obj.data;
+    var cell1 = "";
+    var cell2 = "";
+     
+    // Access the data for a given entry
+    if (feed.Entry) {
+      for (var i = 0; i < feed.Entry.length; i++) {
+
+        cell1 = "cell1" + i;
+        cell2 = "cell2" + i;
+
+        document.getElementById(cell1).innerHTML = '<a href="'+ feed.Entry[i].Link + '" target="_top">' + feed.Entry[i].Title + '</a>';
+           
+        if ( i < 1 ) {
+          document.getElementById("div10").innerHTML = feed.Entry[i].Summary;
+        };
+      };
+    };   
+  };
+  gadgets.util.registerOnLoadHandler(getFeed);
+  </script>
+  ]]>
+  </Content>
+</Module>
