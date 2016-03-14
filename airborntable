@@ -30,7 +30,7 @@ a:active {
 }
 </style>
 </head>
-<div id="div10" style="height:205px;overflow:hidden;"><iframe src="https://docs.google.com/spreadsheets/d/1l2twbdkZArJEb0v1b-FIwySD0iAXsylBMJSgjpLwy1A/pubhtml?gid=0&single=true"></iframe></div>
+<div id="div10" style="height:205px;overflow:hidden;"><iframe src="https://docs.google.com/spreadsheets/d/1l2twbdkZArJEb0v1b-FIwySD0iAXsylBMJSgjpLwy1A/pubhtml?gid=0&amp;single=true&amp;widget=false&amp;headers=false&amp;chrome=false&amp"></iframe></div>
 
   ]]>
   </Content>
