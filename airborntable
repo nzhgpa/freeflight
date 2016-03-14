@@ -65,44 +65,44 @@ a:active {
   </TABLE>
 
 
-  <script type="text/javascript">
+ // <script type="text/javascript">
 
   // Get userprefs
-  var prefs = new gadgets.Prefs();
-  var entries = prefs.getInt("num_entries");
+  //var prefs = new gadgets.Prefs();
+  //var entries = prefs.getInt("num_entries");
 
-  function getFeed() {  
-    var params = {};  
-    params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.FEED;  
-    params[gadgets.io.RequestParameters.NUM_ENTRIES] = new Number(entries);  
-    params[gadgets.io.RequestParameters.GET_SUMMARIES] = true; 
-    var url = "https://docs.google.com/spreadsheets/d/1l2twbdkZArJEb0v1b-FIwySD0iAXsylBMJSgjpLwy1A/pubhtml?gid=0&single=true";  
-    gadgets.io.makeRequest(url, response, params);
-  };
+  //function getFeed() {  
+ //   var params = {};  
+ //   params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.FEED;  
+ //   params[gadgets.io.RequestParameters.NUM_ENTRIES] = new Number(entries);  
+ //   params[gadgets.io.RequestParameters.GET_SUMMARIES] = true; 
+ //   var url = "https://docs.google.com/spreadsheets/d/1l2twbdkZArJEb0v1b-FIwySD0iAXsylBMJSgjpLwy1A/pubhtml?gid=0&single=true";  
+ //   gadgets.io.makeRequest(url, response, params);
+ // };
 
-  function response(obj) { 
+ // function response(obj) { 
     // obj.data contains the feed data
-    var feed = obj.data;
-    var cell1 = "";
-    var cell2 = "";
+ //   var feed = obj.data;
+ //   var cell1 = "";
+ //   var cell2 = "";
      
     // Access the data for a given entry
-    if (feed.Entry) {
-      for (var i = 0; i < feed.Entry.length; i++) {
+ //   if (feed.Entry) {
+ //     for (var i = 0; i < feed.Entry.length; i++) {
 
-        cell1 = "cell1" + i;
-        cell2 = "cell2" + i;
+  //      cell1 = "cell1" + i;
+  //      cell2 = "cell2" + i;
 
-        document.getElementById(cell1).innerHTML = '<a href="'+ feed.Entry[i].Link + '" target="_top">' + feed.Entry[i].Title + '</a>';
+ //       document.getElementById(cell1).innerHTML = '<a href="'+ feed.Entry[i].Link + '" target="_top">' + feed.Entry[i].Title + '</a>';
            
-        if ( i < 1 ) {
-          document.getElementById("div10").innerHTML = feed.Entry[i].Summary;
-        };
-      };
-    };   
-  };
-  gadgets.util.registerOnLoadHandler(getFeed);
-  </script>
+ //       if ( i < 1 ) {
+ //         document.getElementById("div10").innerHTML = feed.Entry[i].Summary;
+ //       };
+ //     };
+ //   };   
+ // };
+ // gadgets.util.registerOnLoadHandler(getFeed);
+ // </script>
   ]]>
   </Content>
 </Module>
