@@ -4,7 +4,7 @@
     title_url="http://groups.google.com/group/Google-Gadgets-API" 
     scrolling="true">
   </ModulePrefs>
-  <UserPref name="num_entries" display_name="Number of Entries:" default_value="6"/>
+  <UserPref name="num_entries" display_name="Number of Entries:" default_value="1"/>
   <Content type="html">
   <![CDATA[
   <head>
@@ -30,7 +30,7 @@ a:active {
 }
 </style>
 </head>
-<div id="div10" style="height:205px;overflow:hidden;"><iframe src="https://docs.google.com/spreadsheets/d/1l2twbdkZArJEb0v1b-FIwySD0iAXsylBMJSgjpLwy1A/pubhtml?gid=0&amp;single=true&amp;widget=false&amp;headers=false&amp;chrome=false&amp"></iframe></div>
+<div id="div10" style="height:600px;overflow:hidden;"><iframe src="https://docs.google.com/spreadsheets/d/1l2twbdkZArJEb0v1b-FIwySD0iAXsylBMJSgjpLwy1A/pubhtml?gid=0&amp;single=true&amp;widget=false&amp;headers=false&amp;chrome=false&amp"></iframe></div>
 
   ]]>
   </Content>
