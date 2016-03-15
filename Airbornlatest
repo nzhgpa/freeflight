@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs title="Airborn Online Issues" 
+    title_url="http://groups.google.com/group/Google-Gadgets-API" 
+    scrolling="true">
+  </ModulePrefs>
+  <UserPref name="num_entries" display_name="Number of Entries:" default_value="1"/>
+  <Content type="html">
+  <![CDATA[
+  <head>
+<style>
+a:link {
+    text-decoration: none;
+    color: #77797c;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #000099;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #77797c;
+}
+
+a:active {
+    text-decoration: underline;
+    color: #000099;
+}
+</style>
+</head>
+<!--<div id="div10" style="height:600px;overflow:hidden;">-->
+<iframe style="height:482px;width:325;border-style:none;" src="<iframe src="https://docs.google.com/spreadsheets/d/1l2twbdkZArJEb0v1b-FIwySD0iAXsylBMJSgjpLwy1A/pubhtml?gid=158138609&amp;single=true&amp;widget=false&amp;headers=false;chrome=false&amp"></iframe>
+<!--</div>-->
+
+  ]]>
+  </Content>
+</Module>
