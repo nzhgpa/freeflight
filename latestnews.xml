@@ -93,7 +93,7 @@ a:active {
         cell1 = "cell1" + i;
         cell2 = "cell2" + i;
 
-        document.getElementById(cell1).innerHTML = '<a href="'+ feed.Entry[i].Link + '" target="_top">' + feed.Entry[i].Title + '</a>';
+        document.getElementById(cell1).innerHTML = '<a href="'+ feed.Entry[i].Link + '" target="_top">' + feed.Entry[i].Title.toUpperCase() + '</a>';
            
         if ( i < 1 ) {
           document.getElementById("div10").innerHTML = feed.Entry[i].Summary;
