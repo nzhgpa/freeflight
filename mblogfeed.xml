@@ -9,10 +9,10 @@
   <![CDATA[
   <head>
 <style>
-<!--a:link { -->
-<!--    text-decoration: none;-->
+a:link { 
+    text-decoration: none;
 <!--    color: #77797c;-->
-<!--}-->
+}
 
 a:visited {
     text-decoration: none;
