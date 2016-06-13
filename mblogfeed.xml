@@ -11,17 +11,17 @@
 <style>
 a:link { 
     text-decoration: none;
-<!--    color: #77797c;-->
+    color: #77797c;
 }
 
 a:visited {
     text-decoration: none;
-<!--     color: #000099;-->
+    color: #000099;
 }
 
 a:hover {
     text-decoration: underline;
-<!--    color: #77797c; -->
+    color: #77797c; 
 }
 
 a:active {
@@ -238,7 +238,7 @@ a:active {
       postDate = new Date(combined[i][0]);
 
       if (combined[i][2].startsWith("Dropbox")) {
-        document.getElementById(cella).innerHTML = '<a href="' + combined[i][3] + '" target="_top"><img src ="'+ combined[i][1] + '" height="14px"><font color="#ff0000">' + combined[i][2] + '</font></a>';
+        document.getElementById(cella).innerHTML = '<a href="' + combined[i][3] + '" target="_top"><img src ="'+ combined[i][1] + '" height="14px"><font color="#ff0000">SAFETY</font>' + combined[i][2].slice(7) + '</a>';
       
       }
     
