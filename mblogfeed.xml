@@ -237,7 +237,7 @@ a:active {
       cellc = "cell" + (i+item);
       postDate = new Date(combined[i][0]);
 
-      if (combined[i][2].startsWith("Dropbox")) {
+      if (combined[i][2].startsWith("SAFETY")) {
         document.getElementById(cella).innerHTML = '<a href="' + combined[i][3] + '" target="_top"><img src ="'+ combined[i][1] + '" height="14px"><font color="#ff0000">SAFETY</font>' + combined[i][2].slice(6) + '</a>';
       }
       else {
