@@ -11,7 +11,7 @@
 <style>
 a:link { 
     text-decoration: none;
-    color: #77797c;
+ <!--   color: #77797c; -->
 }
 
 a:visited {
