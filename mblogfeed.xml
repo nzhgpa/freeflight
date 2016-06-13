@@ -239,9 +239,10 @@ a:active {
 
       if (combined[i][2].startsWith("Dropbox")) {
         document.getElementById(cella).setAttribute("style", "font-family:verdana; color: #ff0000; font-size:14px; font-weight:bold;vertical-align:top;text-align:left;");
+      document.getElementById(cella).innerHTML = '<a href="' + combined[i][3] + '" target="_top"><img src ="'+ combined[i][1] + '" height="14px">' + combined[i][2] + '</a>';
+      
       }
     
-      document.getElementById(cella).innerHTML = '<a href="' + combined[i][3] + '" target="_top"><img src ="'+ combined[i][1] + '" height="14px">' + combined[i][2] + '</a>';
       document.getElementById(cellb).textContent = postDate.toDateString();
       document.getElementById(cellc).textContent = combined[i][4];
       if (cellc != "cell24") {
