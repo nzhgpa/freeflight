@@ -247,7 +247,7 @@ a:active {
           text = text.slice(0,140)+ " …";
         }
 
-        combined[x] = [itmdt,nzhgpa,title,link,text];
+        combined[x] = [itmdt,safety,title,link,text];
         x++;
       }
     }
