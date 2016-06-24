@@ -237,7 +237,7 @@ a:active {
     var div = document.createElement("div");
     if (feed4.Entry) {
       for (var i = 0; i < feed4.Entry.length; i++) {
-        itmdt = feed4.Entry[i].Date;
+        itmdt = feed4.Entry[i].Published;
         title = feed4.Entry[i].Title;
         link = feed4.Entry[i].Link;
         summry = feed4.Entry[i].Summary;
