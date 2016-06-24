@@ -122,7 +122,8 @@ a:active {
   var nzhgpa = "http://www.nzhgpa.org.nz/_/rsrc/1365502452864/config/customLogo.gif?revision=9";
   var general = "http://www.nzhgpa.org.nz/_/rsrc/1365492572734/Home/events.gif";
   var sites = "http://www.nzhgpa.org.nz/_/rsrc/1409903390562/Home/map.gif";
-  var safety = "https://lh3.googleusercontent.com/-8Va18lWEHiI/V2uV-fRRSUI/AAAAAAAAB_Q/1nq33QLqRSIFOGQS8zHG89Bk6FNUDyuwwCCo/s232/safety.jpg";
+  var safety1 = "https://lh3.googleusercontent.com/-8Va18lWEHiI/V2uV-fRRSUI/AAAAAAAAB_Q/1nq33QLqRSIFOGQS8zHG89Bk6FNUDyuwwCCo/s232/safety.jpg";
+  var safety = "https://lh3.googleusercontent.com/-HT96seyXXNY/V2zg7cTGudI/AAAAAAAAB_k/61czEZpkerc8ashiEiChfBUCeUtlGfzagCCo/s232/safety1.gif";
   var combined = [];
   var x = 0;
 
