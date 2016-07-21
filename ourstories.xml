@@ -4,7 +4,7 @@
     title_url="http://groups.google.com/group/Google-Gadgets-API" 
     scrolling="true">
   </ModulePrefs>
-  <UserPref name="num_entries" display_name="Number of Entries:" default_value="6"/>
+  <UserPref name="num_entries" display_name="Number of Entries:" default_value="3"/>
   <Content type="html">
   <![CDATA[
   <head>
@@ -30,36 +30,23 @@ a:active {
 }
 </style>
 </head>
-  <TABLE style="width:540px;">
+  <TABLE style="width:100%;height:100px;">
   <TR>
-  <TD id="cell10" style="font-family:verdana; font-weight: bold; color: #77797c; font-size:16px;vertical-align:top;text-align:left;">
+  <TD id="cell10">
   </TD>
-  </TR>
-  <TR>
-  <TD id="cell20" style="font-family:verdana; color: #77797c; font-size:14px;vertical-align:top;text-align:left;height:205px;"><div id="div10" style="height:205px;overflow:hidden;"></div>
+  <TD id="cell11" style="font-family:verdana; color: #77797c; font-size:10px; vertical-align:top;text-align:left;">
   </TD>
-  </TR>
-  <TR>
-  <TD style="font-family:verdana; font-weight: bold; color: #77797c; font-size:10px; vertical-align:top;text-align:left;">Other recent headlines:
+  <TD id="cell20">
   </TD>
-  <TR>
-  <TD id="cell11" style="font-family:verdana; font-weight: bold; color: #77797c; font-size:16px;vertical-align:top;text-align:left;">
+  <TD id="cell21" style="font-family:verdana; color: #77797c; font-size:10px; vertical-align:top;text-align:left;">
   </TD>
-  </TR>
-  <TR>
-  <TD id="cell12" style="font-family:verdana; font-weight: bold; color: #77797c; font-size:16px;vertical-align:top;text-align:left;">
+  <TD id="cell30">
   </TD>
-  </TR>
-  <TR>
-  <TD id="cell13" style="font-family:verdana; font-weight: bold; color: #77797c; font-size:16px;vertical-align:top;text-align:left;">
+  <TD id="cell31" style="font-family:verdana; color: #77797c; font-size:10px; vertical-align:top;text-align:left;">
   </TD>
-  </TR>
-  <TR>
-  <TD id="cell14" style="font-family:verdana; font-weight: bold; color: #77797c; font-size:16px;vertical-align:top;text-align:left;">
+  <TD id="cell40">
   </TD>
-  </TR>
-  <TR>
-  <TD id="cell15" style="font-family:verdana; font-weight: bold; color: #77797c; font-size:16px;vertical-align:top;text-align:left;">
+  <TD id="cell41" style="font-family:verdana; color: #77797c; font-size:10px; vertical-align:top;text-align:left;">
   </TD>
   </TR>
   </TABLE>
@@ -90,14 +77,11 @@ a:active {
     if (feed.Entry) {
       for (var i = 0; i < feed.Entry.length; i++) {
 
-        cell1 = "cell1" + i;
-        cell2 = "cell2" + i;
+        cell1 = "cell" + i + "0";
+        cell2 = "cell" + i + "1";
 
         document.getElementById(cell1).innerHTML = '<a href="'+ feed.Entry[i].Link + '" target="_top">' + feed.Entry[i].Link.toUpperCase() + '</a>';
-           
-        if ( i < 1 ) {
-          document.getElementById("div10").innerHTML = feed.Entry[i].Summary;
-        };
+        document.getElementById(cell2).innerHTML = feed.Entry[i].Title;
       };
     };   
   };
