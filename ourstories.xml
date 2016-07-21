@@ -51,6 +51,13 @@ a:active {
   </TR>
   </TABLE>
 
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button>
+
+<p id="demo"></p>
+
+    
 
   <script type="text/javascript">
 
@@ -73,12 +80,6 @@ a:active {
     var cell1 = "";
     var cell2 = "";
     
-     <button type="button"
-onclick="document.getElementById('demo').innerHTML = Date()">
-Click me to display Date and Time.</button>
-
-<p id="demo"></p>
-
     // Access the data for a given entry
     if (feed.Entry) {
       for (var i = 0; i < feed.Entry.length; i++) {
