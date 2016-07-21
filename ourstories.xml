@@ -72,7 +72,13 @@ a:active {
     var feed = obj.data;
     var cell1 = "";
     var cell2 = "";
-     
+    
+     <button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button>
+
+<p id="demo"></p>
+
     // Access the data for a given entry
     if (feed.Entry) {
       for (var i = 0; i < feed.Entry.length; i++) {
@@ -81,7 +87,7 @@ a:active {
         cell2 = "cell" + i + "1";
 
         // document.getElementById(cell1).innerHTML = '<img src="' + feed.Entry[i].Image + '" >";
-        document.getElementById(cell2).textContent = cell2;
+        //document.getElementById(cell2).textContent = cell2;
       };
     };   
   };
