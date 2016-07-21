@@ -71,12 +71,14 @@ a:active {
     var feed = obj.data;
     var cell1 = "";
     var cell2 = "";
+    var descstrg = obj.data;
     
     // Access the data for a given entry
     if (feed.Entry) {
       for (var i = 0; i < feed.Entry.length; i++) {
 // <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://1.bp.blogspot.com/-8j6Fj_Sm6hY/VO5xBIKociI/AAAAAAAACEw/8bJnzuzwwXI/s72-c/low.jpeg" height="72" width="72" />
-        var descstrg1 = feed.split('media:thumbnail');
+
+        var descstrg1 = descstrg.split('media:thumbnail');
         var descstrg2 = descstrg1[i+1].split('url="');
         var descstrg3 = descstrg2[i+1].split('" height');
         var image = descstrg3[0];        
