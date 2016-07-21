@@ -32,6 +32,10 @@ a:active {
 </head>
   <TABLE style="width:100%;height:100px;">
   <TR>
+  <TD id="cell00">
+  </TD>
+  <TD id="cell01" style="font-family:verdana; color: #77797c; font-size:10px; vertical-align:top;text-align:left;">
+  </TD>
   <TD id="cell10">
   </TD>
   <TD id="cell11" style="font-family:verdana; color: #77797c; font-size:10px; vertical-align:top;text-align:left;">
@@ -43,10 +47,6 @@ a:active {
   <TD id="cell30">
   </TD>
   <TD id="cell31" style="font-family:verdana; color: #77797c; font-size:10px; vertical-align:top;text-align:left;">
-  </TD>
-  <TD id="cell40">
-  </TD>
-  <TD id="cell41" style="font-family:verdana; color: #77797c; font-size:10px; vertical-align:top;text-align:left;">
   </TD>
   </TR>
   </TABLE>
