@@ -76,6 +76,17 @@ a:active {
     if (feed.Entry) {
       for (var i = 0; i < feed.Entry.length; i++) {
 
+        var descstrg1 = feed.split('media:content url="');
+        var descstrg2 = descstrg1[i+1].split("/>");
+        var descstrg3 = feed.split('media:thumbnail url="');
+        var descstrg4 = descstrg3[i+1].split('"');
+        var descstrg5 = feed.split("<media:title>");
+        var descstrg6 = descstrg5[i+1].split("</media:title>");
+     
+        var link = descstrg2[0];
+        var image = descstrg4[0];        
+        var descp = descstrg6[0];
+        
         cell1 = "cell" + i + "0";
         cell2 = "cell" + i + "1";
 
