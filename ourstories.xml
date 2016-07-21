@@ -75,22 +75,16 @@ a:active {
     // Access the data for a given entry
     if (feed.Entry) {
       for (var i = 0; i < feed.Entry.length; i++) {
-
-        var descstrg1 = feed.split('media:content url="');
-        var descstrg2 = descstrg1[i+1].split("/>");
-        var descstrg3 = feed.split('media:thumbnail url="');
-        var descstrg4 = descstrg3[i+1].split('"');
-        var descstrg5 = feed.split("<media:title>");
-        var descstrg6 = descstrg5[i+1].split("</media:title>");
-     
-        var link = descstrg2[0];
-        var image = descstrg4[0];        
-        var descp = descstrg6[0];
+// <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://1.bp.blogspot.com/-8j6Fj_Sm6hY/VO5xBIKociI/AAAAAAAACEw/8bJnzuzwwXI/s72-c/low.jpeg" height="72" width="72" />
+        var descstrg1 = feed.split('media:thumbnail');
+        var descstrg2 = descstrg1[i+1].split('url="';
+        var descstrg3 = descstrg2[i+1].split('" height');
+        var image = descstrg3[0];        
         
         cell1 = "cell" + i + "0";
         cell2 = "cell" + i + "1";
 
-        document.getElementById(cell1).innerHTML = feed.Entry[i].Media;
+        document.getElementById(cell1).innerHTML = image;
         document.getElementById(cell2).innerHTML = feed.Entry[i].Title;
       };
     };   
