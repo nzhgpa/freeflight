@@ -70,8 +70,8 @@
       cell1 = "cell" + i + "0";
       cell2 = "cell" + i + "1";
 
-      document.getElementById(cell1).innerHTML = descstrg1[i+1];
-      document.getElementById(cell2).innerHTML = cell2;
+      document.getElementById(cell1).innerHTML = feed;
+      //document.getElementById(cell2).innerHTML = cell2;
     };
   };   
   
