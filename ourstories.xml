@@ -69,7 +69,7 @@ a:active {
     params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.FEED;  
     params[gadgets.io.RequestParameters.NUM_ENTRIES] = new Number(entries);  
     params[gadgets.io.RequestParameters.GET_SUMMARIES] = true; 
-    var url = "http://feeds.feedburner.com/Nzhgpa-latest";  
+    var url = "http://feeds.feedburner.com/Nzhgpa-ourstories";  
     gadgets.io.makeRequest(url, response, params);
   };
   function response(obj) { 
