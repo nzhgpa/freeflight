@@ -58,8 +58,11 @@ a:active {
     
     var feed = obj.data;
    
+    var summry = "";
+    var text = "";
     var cell1 = "";
     var cell2 = "";
+    var div = document.createElement("div");
     
     //for (var i = 0; i < 4; i++) {
       //var descstrg1 = feed.split("<media:thumbnail");
@@ -67,7 +70,7 @@ a:active {
       //var descstrg3 = descstrg2[i+1].split('" height');
       //var image = descstrg3[0];
     //};      
-    var div = document.createElement("div");
+    
     for (var i = 0; i < 4; i++) {
 // <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://1.bp.blogspot.com/-8j6Fj_Sm6hY/VO5xBIKociI/AAAAAAAACEw/8bJnzuzwwXI/s72-c/low.jpeg" height="72" width="72" />
       cell1 = "cell" + i + "0";
