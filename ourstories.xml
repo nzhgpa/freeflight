@@ -64,7 +64,7 @@
     var cell2 = "";
     
   for (var i = 0; i < 12; i++) {
-    var descstrg1 = descstrg.split("<media:thumbnail");
+    var descstrg1 = feed.split("<media:thumbnail");
     var descstrg2 = descstrg1[i+1].split('url="');
     var descstrg3 = descstrg2[i+1].split('" height');
     var image = descstrg3[0];
