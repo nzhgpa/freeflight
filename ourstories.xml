@@ -73,7 +73,7 @@
       cell2 = "cell" + i + "1";
 
       document.getElementById(cell1).innerHTML = feed.Entry[i].Title;
-      document.getElementById(cell2).innerHTML = feed.Entry[i].Media;
+      document.getElementById(cell2).innerHTML = feed.Entry[i].Description;
     };
   };   
   
