@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
-  <ModulePrefs title="Vimeo Feed" 
+  <ModulePrefs title="Our Stories" 
     title_url="http://groups.google.com/group/Google-Gadgets-API" 
     scrolling="true">
   </ModulePrefs>
-  <UserPref name="num_entries" display_name="Number of Entries:" default_value="12"/>
+  <UserPref name="num_entries" display_name="Number of Entries:" default_value="4"/>
   <Content type="html">
   <![CDATA[
 
   <style>
-  td {
-    border:2px solid #a7a9ac;
-  }
-  img {
-    display:block;
-    margin:0 auto;
-  }
-    </style>
+    td {
+      border:2px solid #a7a9ac;
+    }
+    img {
+      display:block;
+      margin:0 auto;
+    }
+  </style>
 
   <TABLE style="width:100%;height:100px;">
   <TR>
@@ -48,18 +48,13 @@
   function getFeed() {  
     var params = {};  
     params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.TEXT;  
-    //params[gadgets.io.RequestParameters.NUM_ENTRIES] = new Number(entries);  
-    //params[gadgets.io.RequestParameters.GET_SUMMARIES] = true; 
-    //var url = "http://www.nzhgpa.org.nz"; 
-    //var url = "http://feeds.feedburner.com/Vimeo/Nzhgpa"; 
-    //var url = "http://feeds.feedburner.com/youtube/sIgl"; 
     var url = "http://feeds.feedburner.com/Nzhgpa-ourStories";
     gadgets.io.makeRequest(url, response, params);
   };
 
   function response(obj) { 
-    // obj.data contains the feed data
-    var feed = obj.data;
+    
+    var feed = obj.text;
     var cell1 = "";
     var cell2 = "";
     
@@ -70,16 +65,16 @@
       var image = descstrg3[0];
     };      
     
-    for (var i = 0; i < feed.Entry.length; i++) {
+    for (var i = 0; i < 4; i++) {
 // <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://1.bp.blogspot.com/-8j6Fj_Sm6hY/VO5xBIKociI/AAAAAAAACEw/8bJnzuzwwXI/s72-c/low.jpeg" height="72" width="72" />
       cell1 = "cell" + i + "0";
       cell2 = "cell" + i + "1";
 
-      document.getElementById(cell1).innerHTML = descstrg1[0];
-      document.getElementById(cell2).innerHTML = feed.Entry[i].Title;
+      document.getElementById(cell1).innerHTML = descstrg1[i+1];
+      document.getElementById(cell2).innerHTML = cell2;
     };
   };   
-  
+};  
   gadgets.util.registerOnLoadHandler(getFeed);
   </script>
   ]]>
