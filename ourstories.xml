@@ -60,7 +60,7 @@
     var cell1 = "";
     var cell2 = "";
     
-    //for (var i = 0; i < 12; i++) {
+    //for (var i = 0; i < 4; i++) {
       //var descstrg1 = feed.split("<media:thumbnail");
      // var descstrg2 = descstrg1[i+1].split('url="');
       //var descstrg3 = descstrg2[i+1].split('" height');
@@ -72,7 +72,7 @@
       cell1 = "cell" + i + "0";
       cell2 = "cell" + i + "1";
 
-      document.getElementById(cell1).innerHTML = feed.Entry[i].Title;
+      document.getElementById(cell1).innerHTML = feed.Entry[i];
       document.getElementById(cell2).innerHTML = cell2;
     };
   };   
