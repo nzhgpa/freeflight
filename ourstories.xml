@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
-  <ModulePrefs title="Our Stories" 
+  <ModulePrefs title="Latest News" 
     title_url="http://groups.google.com/group/Google-Gadgets-API" 
     scrolling="true">
   </ModulePrefs>
-  <UserPref name="num_entries" display_name="Number of Entries:" default_value="4"/>
+  <UserPref name="num_entries" display_name="Number of Entries:" default_value="6"/>
   <Content type="html">
   <![CDATA[
-
-  <style>
+  <head>
+<style>
 a:link {
     text-decoration: none;
     color: #77797c;
@@ -26,63 +26,71 @@ a:active {
     color: #000099;
 }
 </style>
-
-<TABLE style="width:100%;height:100px;">
+</head>
+  <TABLE style="width:540px;">
   <TR>
-  <TD id="cell00">
+  <TD id="cell10" style="font-family:verdana; font-weight: bold; color: #77797c; font-size:16px;vertical-align:top;text-align:left;">
   </TD>
-  <TD id="cell10">
+  </TR>
+  <TR>
+  <TD id="cell20" style="font-family:verdana; color: #77797c; font-size:14px;vertical-align:top;text-align:left;height:205px;"><div id="div10" style="height:205px;overflow:hidden;"></div>
   </TD>
-  <TD id="cell20">
+  </TR>
+  <TR>
+  <TD style="font-family:verdana; font-weight: bold; color: #77797c; font-size:10px; vertical-align:top;text-align:left;">Other recent headlines:
   </TD>
-  <TD id="cell30">
+  <TR>
+  <TD id="cell11" style="font-family:verdana; font-weight: bold; color: #77797c; font-size:16px;vertical-align:top;text-align:left;">
+  </TD>
+  </TR>
+  <TR>
+  <TD id="cell12" style="font-family:verdana; font-weight: bold; color: #77797c; font-size:16px;vertical-align:top;text-align:left;">
+  </TD>
+  </TR>
+  <TR>
+  <TD id="cell13" style="font-family:verdana; font-weight: bold; color: #77797c; font-size:16px;vertical-align:top;text-align:left;">
+  </TD>
+  </TR>
+  <TR>
+  <TD id="cell14" style="font-family:verdana; font-weight: bold; color: #77797c; font-size:16px;vertical-align:top;text-align:left;">
+  </TD>
+  </TR>
+  <TR>
+  <TD id="cell15" style="font-family:verdana; font-weight: bold; color: #77797c; font-size:16px;vertical-align:top;text-align:left;">
   </TD>
   </TR>
   </TABLE>
-
   <script type="text/javascript">
-
   // Get userprefs
   var prefs = new gadgets.Prefs();
   var entries = prefs.getInt("num_entries");
-
   function getFeed() {  
     var params = {};  
     params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.FEED;  
-    var url = "http://feeds.feedburner.com/Nzhgpa-ourstories";
-    //var url = "https://www.youtube.com/feeds/videos.xml?playlist_id=PLpVYLDpbv9r6F9ykRsswRl2gXUEOYl35Y";
+    params[gadgets.io.RequestParameters.NUM_ENTRIES] = new Number(entries);  
+    params[gadgets.io.RequestParameters.GET_SUMMARIES] = true; 
+    var url = "http://feeds.feedburner.com/Nzhgpa-latest";  
     gadgets.io.makeRequest(url, response, params);
   };
-
   function response(obj) { 
-    
+    // obj.data contains the feed data
     var feed = obj.data;
-   
-    var summry = "";
-    var text = "";
     var cell1 = "";
     var cell2 = "";
-    var div = document.createElement("div");
-    
-    //for (var i = 0; i < 4; i++) {
-      //var descstrg1 = feed.split("<media:thumbnail");
-     // var descstrg2 = descstrg1[i+1].split('url="');
-      //var descstrg3 = descstrg2[i+1].split('" height');
-      //var image = descstrg3[0];
-    //};      
-    
-    for (var i = 0; i < 4; i++) {
-// <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://1.bp.blogspot.com/-8j6Fj_Sm6hY/VO5xBIKociI/AAAAAAAACEw/8bJnzuzwwXI/s72-c/low.jpeg" height="72" width="72" />
-      cell1 = "cell" + i + "0";
-      //cell2 = "cell" + i + "1";
-        summry = feed.Entry[i];
-        div.innerHTML = summry;
-        text = div.textContent;
-      document.getElementById(cell1).textContent = text;
-      //document.getElementById(cell2).innerHTML = cell2;
-    };
-  };   
-  
+     
+    // Access the data for a given entry
+    if (feed.Entry) {
+      for (var i = 0; i < feed.Entry.length; i++) {
+        cell1 = "cell1" + i;
+        cell2 = "cell2" + i;
+        document.getElementById(cell1).innerHTML = '<a href="'+ feed.Entry[i].Link + '" target="_top">' + feed.Entry[i].Title.toUpperCase() + '</a>';
+           
+        if ( i < 1 ) {
+          document.getElementById("div10").innerHTML = feed.Entry[i].Summary;
+        };
+      };
+    };   
+  };
   gadgets.util.registerOnLoadHandler(getFeed);
   </script>
   ]]>
