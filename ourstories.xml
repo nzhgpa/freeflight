@@ -73,7 +73,7 @@
       cell2 = "cell" + i + "1";
 
       document.getElementById(cell1).innerHTML = cell2;
-      document.getElementById(cell2).innerHTML = feed.getElementsByTagName("item").item(i);
+      document.getElementById(cell2).innerHTML = feed.getElementsByTagName("item");
     };
   };   
   
