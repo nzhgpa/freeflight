@@ -75,7 +75,7 @@ a:active {
 // <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://1.bp.blogspot.com/-8j6Fj_Sm6hY/VO5xBIKociI/AAAAAAAACEw/8bJnzuzwwXI/s72-c/low.jpeg" height="72" width="72" />
       cell1 = "cell" + i + "0";
       //cell2 = "cell" + i + "1";
-        summry = feed.Entry[i].Content;
+        summry = feed.Entry[i].Title;
         div.innerHTML = summry;
         text = div.textContent;
       document.getElementById(cell1).textContent = text;
