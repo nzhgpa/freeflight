@@ -79,7 +79,7 @@
         cell1 = "cell" + i + "0";
         cell2 = "cell" + i + "1";
 
-        document.getElementById(cell1).innerHTML = descstrg1;
+        document.getElementById(cell1).innerHTML = descstrg1[0];
         document.getElementById(cell2).innerHTML = feed.Entry[i].Title;
       };
     };   
