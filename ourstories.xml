@@ -74,7 +74,7 @@
       document.getElementById(cell2).innerHTML = cell2;
     };
   };   
-};  
+  
   gadgets.util.registerOnLoadHandler(getFeed);
   </script>
   ]]>
