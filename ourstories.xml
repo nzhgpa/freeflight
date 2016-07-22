@@ -1,34 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
-  <ModulePrefs title="Our Stories" 
+  <ModulePrefs title="Vimeo Feed" 
     title_url="http://groups.google.com/group/Google-Gadgets-API" 
     scrolling="true">
   </ModulePrefs>
-  <UserPref name="num_entries" display_name="Number of Entries:" default_value="3"/>
+  <UserPref name="num_entries" display_name="Number of Entries:" default_value="12"/>
   <Content type="html">
   <![CDATA[
-  <head>
-<style>
-a:link {
-    text-decoration: none;
-    color: #77797c;
-}
 
-a:visited {
-    text-decoration: none;
-    color: #000099;
-}
-
-a:hover {
-    text-decoration: underline;
-    color: #77797c;
-}
-
-a:active {
-    text-decoration: underline;
-    color: #000099;
-}
-</style>
+  <style>
+  td {
+    border:2px solid #a7a9ac;
+  }
+  img {
+    display:block;
+    margin:0 auto;
+  }
+    </style>
 </head>
   <TABLE style="width:100%;height:100px;">
   <TR>
@@ -59,10 +47,13 @@ a:active {
 
   function getFeed() {  
     var params = {};  
-    params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.FEED;  
-    params[gadgets.io.RequestParameters.NUM_ENTRIES] = new Number(entries);  
-    params[gadgets.io.RequestParameters.GET_SUMMARIES] = true; 
-    var url = "http://feeds.feedburner.com/Nzhgpa-ourStories";  
+    params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.TEXT;  
+    //params[gadgets.io.RequestParameters.NUM_ENTRIES] = new Number(entries);  
+    //params[gadgets.io.RequestParameters.GET_SUMMARIES] = true; 
+    //var url = "http://www.nzhgpa.org.nz"; 
+    //var url = "http://feeds.feedburner.com/Vimeo/Nzhgpa"; 
+    //var url = "http://feeds.feedburner.com/youtube/sIgl"; 
+    var url = "http://feeds.feedburner.com/Nzhgpa-ourStories";
     gadgets.io.makeRequest(url, response, params);
   };
 
@@ -71,17 +62,19 @@ a:active {
     var feed = obj.data;
     var cell1 = "";
     var cell2 = "";
-    var descstrg = obj.data;
     
-    // Access the data for a given entry
+  for (var i = 0; i < 12; i++) {
+    var descstrg1 = descstrg.split("<media:thumbnail");
+    var descstrg2 = descstrg1[i+1].split('url="');
+    var descstrg3 = descstrg2[i+1].split('" height');
+    var image = descstrg3[0];
+        
+       // Access the data for a given entry
     if (feed.Entry) {
       for (var i = 0; i < feed.Entry.length; i++) {
 // <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://1.bp.blogspot.com/-8j6Fj_Sm6hY/VO5xBIKociI/AAAAAAAACEw/8bJnzuzwwXI/s72-c/low.jpeg" height="72" width="72" />
 
-        var descstrg1 = descstrg.split("<media:thumbnail");
-        var descstrg2 = descstrg1[i+1].split('url="');
-        var descstrg3 = descstrg2[i+1].split('" height');
-        var image = descstrg3[0];        
+                
         
         cell1 = "cell" + i + "0";
         cell2 = "cell" + i + "1";
