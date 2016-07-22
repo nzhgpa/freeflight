@@ -9,32 +9,33 @@
   <![CDATA[
 
   <style>
-    td {
-      border:2px solid #a7a9ac;
-    }
-    img {
-      display:block;
-      margin:0 auto;
-    }
-  </style>
+a:link {
+    text-decoration: none;
+    color: #77797c;
+}
+a:visited {
+    text-decoration: none;
+    color: #000099;
+}
+a:hover {
+    text-decoration: underline;
+    color: #77797c;
+}
+a:active {
+    text-decoration: underline;
+    color: #000099;
+}
+</style>
 
-  <TABLE style="width:100%;height:100px;">
+<TABLE style="width:100%;height:100px;">
   <TR>
   <TD id="cell00">
   </TD>
-  <TD id="cell01" style="font-family:verdana; color: #77797c; font-size:10px; vertical-align:top;text-align:left;">
-  </TD>
   <TD id="cell10">
-  </TD>
-  <TD id="cell11" style="font-family:verdana; color: #77797c; font-size:10px; vertical-align:top;text-align:left;">
   </TD>
   <TD id="cell20">
   </TD>
-  <TD id="cell21" style="font-family:verdana; color: #77797c; font-size:10px; vertical-align:top;text-align:left;">
-  </TD>
   <TD id="cell30">
-  </TD>
-  <TD id="cell31" style="font-family:verdana; color: #77797c; font-size:10px; vertical-align:top;text-align:left;">
   </TD>
   </TR>
   </TABLE>
@@ -47,7 +48,7 @@
 
   function getFeed() {  
     var params = {};  
-    params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.DOM;  
+    params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.FEED;  
     var url = "http://feeds.feedburner.com/blogspot/uqziR";
     //var url = "https://www.youtube.com/feeds/videos.xml?playlist_id=PLpVYLDpbv9r6F9ykRsswRl2gXUEOYl35Y";
     gadgets.io.makeRequest(url, response, params);
@@ -70,10 +71,10 @@
     for (var i = 0; i < 4; i++) {
 // <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://1.bp.blogspot.com/-8j6Fj_Sm6hY/VO5xBIKociI/AAAAAAAACEw/8bJnzuzwwXI/s72-c/low.jpeg" height="72" width="72" />
       cell1 = "cell" + i + "0";
-      cell2 = "cell" + i + "1";
+      //cell2 = "cell" + i + "1";
 
-      document.getElementById(cell1).innerHTML = feed.getElementsByTagName("item");
-      document.getElementById(cell2).innerHTML = cell2;
+      document.getElementById(cell1).innerHTML = feed.Entry[i].Title;
+      //document.getElementById(cell2).innerHTML = cell2;
     };
   };   
   
