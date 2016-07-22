@@ -67,13 +67,15 @@ a:active {
       //var descstrg3 = descstrg2[i+1].split('" height');
       //var image = descstrg3[0];
     //};      
-    
+    var div = document.createElement("div");
     for (var i = 0; i < 4; i++) {
 // <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://1.bp.blogspot.com/-8j6Fj_Sm6hY/VO5xBIKociI/AAAAAAAACEw/8bJnzuzwwXI/s72-c/low.jpeg" height="72" width="72" />
       cell1 = "cell" + i + "0";
       //cell2 = "cell" + i + "1";
-
-      document.getElementById(cell1).innerHTML = feed.Entry[i];
+        summry = feed.Entry[i].Summary;
+        div.innerHTML = summry;
+        text = div.textContent;
+      document.getElementById(cell1).textContent = text;
       //document.getElementById(cell2).innerHTML = cell2;
     };
   };   
