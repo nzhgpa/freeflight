@@ -48,8 +48,8 @@
   function getFeed() {  
     var params = {};  
     params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.FEED;  
-    //var url = "http://feeds.feedburner.com/blogspot/uqziR";
-    var url = "https://www.youtube.com/feeds/videos.xml?playlist_id=PLpVYLDpbv9r6F9ykRsswRl2gXUEOYl35Y";
+    var url = "http://feeds.feedburner.com/blogspot/uqziR";
+    //var url = "https://www.youtube.com/feeds/videos.xml?playlist_id=PLpVYLDpbv9r6F9ykRsswRl2gXUEOYl35Y";
     gadgets.io.makeRequest(url, response, params);
   };
 
