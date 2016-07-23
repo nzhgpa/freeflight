@@ -87,7 +87,7 @@ a:active {
            
         if ( i < 1 ) {
           //document.getElementById("div10").innerHTML = feed.Entry[i].Summary;
-          document.getElementById("div10").innerHTML = feed.Entry[i];
+          document.getElementById("div10").innerHTML = feed;
         };
       };
     };   
