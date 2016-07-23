@@ -86,7 +86,8 @@ a:active {
         document.getElementById(cell1).innerHTML = '<a href="'+ feed.Entry[i].Link + '" target="_top">' + feed.Entry[i].Title.toUpperCase() + '</a>';
            
         if ( i < 1 ) {
-          document.getElementById("div10").innerHTML = feed.Entry[i].Summary;
+          //document.getElementById("div10").innerHTML = feed.Entry[i].Summary;
+          document.getElementById("div10").innerHTML = feed.Entry[i];
         };
       };
     };   
