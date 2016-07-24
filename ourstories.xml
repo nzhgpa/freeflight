@@ -50,27 +50,27 @@
    var sorted = [];
     
    for (var i = 0; i < 12; i++) {
-     var descstrg1 = feed.split('media:content url="');
-     var descstrg2 = descstrg1[i+1].split("/>");
-     var descstrg3 = feed.split('media:thumbnail url="');
-     var descstrg4 = descstrg3[i+1].split('"');
-     var descstrg5 = feed.split("<media:title>");
-     var descstrg6 = descstrg5[i+1].split("</media:title>");
+     //var descstrg1 = feed.split('media:content url="');
+     //var descstrg2 = descstrg1[i+1].split("/>");
+     //var descstrg3 = feed.split('media:thumbnail url="');
+     //var descstrg4 = descstrg3[i+1].split('"');
+     //var descstrg5 = feed.split("<media:title>");
+     //var descstrg6 = descstrg5[i+1].split("</media:title>");
      
-     var link = descstrg2[0];
-     var image = descstrg4[0];        
-     var descp = descstrg6[0];
+     //var link = descstrg2[0];
+     //var image = descstrg4[0];        
+     //var descp = descstrg6[0];
   
      //var link = "http://www.youtube.com/playlist?list=PLpVYLDpbv9r6F9ykRsswRl2gXUEOYl35Y";
      //var image = "http://www.nzhgpa.org.nz/_/rsrc/1365502452864/config/customLogo.gif?revision=9";        
      //var descp = "NZHGPA YouTube Playlist";
       
-     sorted[i] = [Math.random(),i,link,image,descp];
+     //sorted[i] = [Math.random(),i,link,image,descp];
    };
-   sorted.sort(function(a, b)
-   {
-     return a[0]-b[0].xml
-   });
+   //sorted.sort(function(a, b)
+   //{
+     //return a[0]-b[0].xml
+   //});
    for (var i = 0; i < 12 ; i++) {
      field = "result"+i;
      //document.getElementById(field).textContent = '<a href="' + sorted[i][2] + '" target = "_blank"><img title="' + sorted[i][4] + '" src="' + sorted[i][3] + '" width="100px"></a>';
