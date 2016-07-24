@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
-  <ModulePrefs title="Vimeo Feed" 
+  <ModulePrefs title="Our Stories" 
     title_url="http://groups.google.com/group/Google-Gadgets-API" 
     scrolling="true">
   </ModulePrefs>
@@ -40,10 +40,7 @@
     params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.TEXT;  
     //params[gadgets.io.RequestParameters.NUM_ENTRIES] = new Number(entries);  
     //params[gadgets.io.RequestParameters.GET_SUMMARIES] = true; 
-    //var url = "http://www.nzhgpa.org.nz"; 
-    //var url = "http://feeds.feedburner.com/Vimeo/Nzhgpa"; 
-    //var url = "http://feeds.feedburner.com/youtube/sIgl"; 
-    var url = "https://www.youtube.com/feeds/videos.xml?playlist_id=PLpVYLDpbv9r6F9ykRsswRl2gXUEOYl35Y";
+    var url = "http://feeds.feedburner.com/nzhgpa-ourstories"; 
     gadgets.io.makeRequest(url, response, params);
   };
  function response(obj) { 
