@@ -51,9 +51,12 @@
      var descstrg5 = descstrg4[1].split("url=");
      var descstrg6 = descstrg5[1].split('"');
      var descstrg7 = descstrg6[1].replace("/s72-c/","/s100-c/");
+     var descstrg8 = descstrg1[i+1].split("Post Comments");
+     var descstrg9 = descstrg8[1].split('href="');
+     var descstrg10 = descstrg9[1].split("#comment");
    
      field = "result0"+i;
-     document.getElementById(field).innerHtml = '<img src="' + descstrg7 + '">';
+     document.getElementById(field).textContent = '<a href="' + descstrg10[1] + '"?view=magazine"><img src="' + descstrg7 + '"></a>';
      field = "result1"+i;
      document.getElementById(field).textContent = descstrg3[0];
    };
