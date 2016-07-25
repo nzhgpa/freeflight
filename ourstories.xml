@@ -72,7 +72,7 @@
    //{
      //return a[0]-b[0].xml
    //});
-   for (var i = 0; i < 4 ; i++) {
+   for (var i = 1; i < 5 ; i++) {
      field = "result"+i;
      //document.getElementById(field).textContent = '<a href="' + sorted[i][2] + '" target = "_blank"><img title="' + sorted[i][4] + '" src="' + sorted[i][3] + '" width="100px"></a>';
      //document.getElementById(field).textContent = descstrg5[0]+i;
