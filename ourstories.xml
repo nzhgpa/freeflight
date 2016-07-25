@@ -55,7 +55,7 @@
      document.getElementById(field).textContent = '<img src="' + descstrg7 + '">';
      field = "result1"+i;
      document.getElementById(field).textContent = descstrg3[0];
-   
+   };
    //for (var i = 0; i < 4; i++) {
      //var descstrg1 = feed.split('media:content url="');
      
