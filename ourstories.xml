@@ -48,6 +48,7 @@
    var feed = obj.text;
    var field = "";
    var sorted = [];
+   var descstrg1 = feed.split("<entry>");
     
    for (var i = 0; i < 12; i++) {
      //var descstrg1 = feed.split('media:content url="');
@@ -71,11 +72,11 @@
    //{
      //return a[0]-b[0].xml
    //});
-   for (var i = 0; i < 12 ; i++) {
+   for (var i = 0; i < 4 ; i++) {
      field = "result"+i;
      //document.getElementById(field).textContent = '<a href="' + sorted[i][2] + '" target = "_blank"><img title="' + sorted[i][4] + '" src="' + sorted[i][3] + '" width="100px"></a>';
      //document.getElementById(field).textContent = descstrg5[0]+i;
-     document.getElementById(field).textContent = feed;
+     document.getElementById(field).textContent = descstrg1.[i];
      if (sorted[i][1] == 0)
      { 
        document.getElementById(field).setAttribute("style", "background-color: #a7a9ac;");
