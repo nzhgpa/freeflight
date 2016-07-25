@@ -54,9 +54,10 @@
    var descstrg4 = descstrg1[1].split("<media:thumbnail");
    var descstrg5 = descstrg4[1].split("url=");
    var descstrg6 = descstrg5[1].split('"');
+   var descstrg7 = descstrg6[1].replace("/s72-c/","/s100-c/");
    
    field = "result"+0;
-   document.getElementById(field).textContent = descstrg6[1];
+   document.getElementById(field).textContent = descstrg7;
    field = "result"+1;
    document.getElementById(field).textContent = descstrg3[0];
    
