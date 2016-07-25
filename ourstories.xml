@@ -57,7 +57,7 @@
    var descstrg7 = descstrg6[1].replace("/s72-c/","/s100-c/");
    
    field = "result"+0;
-   document.getElementById(field).textContent = descstrg7;
+   document.getElementById(field).textContent = '<img src="' + descstrg7 + '>';
    field = "result"+1;
    document.getElementById(field).textContent = descstrg3[0];
    
