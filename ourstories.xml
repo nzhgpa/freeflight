@@ -52,7 +52,7 @@
     
    for (var i = 0; i < 12; i++) {
      //var descstrg1 = feed.split('media:content url="');
-     //var descstrg2 = descstrg1[i+1].split("/>");
+     var descstrg2 = descstrg1[i+1].split('<title type="text">');
      //var descstrg3 = feed.split('media:thumbnail url="');
      //var descstrg4 = descstrg3[i+1].split('"');
      //var descstrg5 = feed.split("<media:title>");
@@ -76,11 +76,11 @@
      field = "result"+i;
      //document.getElementById(field).textContent = '<a href="' + sorted[i][2] + '" target = "_blank"><img title="' + sorted[i][4] + '" src="' + sorted[i][3] + '" width="100px"></a>';
      //document.getElementById(field).textContent = descstrg5[0]+i;
-     document.getElementById(field).textContent = descstrg1[i];
-     if (sorted[i][1] == 0)
-     { 
-       document.getElementById(field).setAttribute("style", "background-color: #a7a9ac;");
-     };
+     document.getElementById(field).textContent = descstrg2[i];
+     //if (sorted[i][1] == 0)
+     //{ 
+       //document.getElementById(field).setAttribute("style", "background-color: #a7a9ac;");
+     //};
    };
  };
   gadgets.util.registerOnLoadHandler(getFeed);
