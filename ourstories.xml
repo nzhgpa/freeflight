@@ -56,7 +56,7 @@
      var descstrg10 = descstrg9[1].split("#comment");
    
      field = "result0"+i;
-     document.getElementById(field).innerHTML = '<a href="' + descstrg10[0] + '"/?view=magazine"><img src="' + descstrg7 + '"></a>';
+     document.getElementById(field).innerHTML = '<a href="' + descstrg10[0] + '"\?view=magazine"><img src="' + descstrg7 + '"></a>';
      field = "result1"+i;
      document.getElementById(field).textContent = descstrg3[0];
    };
