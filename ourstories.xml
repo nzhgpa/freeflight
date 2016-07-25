@@ -16,8 +16,9 @@
     margin:0 auto;
   }
     </style>
-  <TABLE style="background-color: #a7a9ac; vertical-align: top;height:398px;width:340px;border-collapse:collapse;">
+  <TABLE style="background-color: #a7a9ac; vertical-align: top;width:100%;border-collapse:collapse;">
   <TR>
+  <TD>Our Stories</TD>
   <TD id="result00"></TD><TD id="result10"></TD>
   <TD id="result01"></TD><TD id="result11"></TD>
   <TD id="result02"></TD><TD id="result12"></TD>
@@ -52,7 +53,7 @@
      var descstrg7 = descstrg6[1].replace("/s72-c/","/s100-c/");
    
      field = "result0"+i;
-     document.getElementById(field).innerHTML = '<img src="' + descstrg7 + '">';
+     document.getElementById(field).innerHtml = '<img src="' + descstrg7 + '">';
      field = "result1"+i;
      document.getElementById(field).textContent = descstrg3[0];
    };
