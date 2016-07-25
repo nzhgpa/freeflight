@@ -18,17 +18,10 @@
     </style>
   <TABLE style="background-color: #a7a9ac; vertical-align: top;height:398px;width:340px;border-collapse:collapse;">
   <TR>
-  <TD id="result0" style="background-color: white;" colspan="2"></TD><TD id="result1" style="background-color: white;" colspan="2"></TD><TD id="result2" style="background-color: white;" colspan="2"></TD>
-  </TR><TR>
-  <TD id="result3" style="background-color: white;" colspan="2"></TD><TD id="result4" style="background-color: white;" colspan="2"></TD><TD id="result5" style="background-color: white;" colspan="2"></TD>
-  </TR><TR>
-  <TD id="result6" style="background-color: white;" colspan="2"></TD><TD id="result7" style="background-color: white;" colspan="2"></TD><TD id="result8" style="background-color: white;" colspan="2"></TD>
-  </TR><TR>
-  <TD id="result9" style="background-color: white;" colspan="2"></TD><TD id="result10" style="background-color: white;" colspan="2"></TD><TD id="result11" style="background-color: white;" colspan="2"></TD>
-  </TR>
-  <TR>
-  <TD style="font-family: Arial, san serif; font-size: 14px;" colspan="3"><b>nzhgpa</b><b style="color:grey;">YouTube</b></TD>
-  <TD style="text-align: right; font-size: 14px;" colspan="3"><a href="http://www.youtube.com/c/NZHGPA" style="color: white;" target="_blank"><i>This is what we do &gt;&gt;</i></a></TD>
+  <TD id="result00"></TD><TD id="result10"></TD>
+  <TD id="result01"></TD><TD id="result11"></TD>
+  <TD id="result02"></TD><TD id="result12"></TD>
+  <TD id="result03"></TD><TD id="result13"></TD>
   </TR>
   </TABLE>
   <script type="text/javascript">
@@ -49,17 +42,19 @@
    var field = "";
    var sorted = [];
    var descstrg1 = feed.split("<entry>");
-   var descstrg2 = descstrg1[1].split('<title type="text">');  
-   var descstrg3 = descstrg2[1].split("</title>");
-   var descstrg4 = descstrg1[1].split("<media:thumbnail");
-   var descstrg5 = descstrg4[1].split("url=");
-   var descstrg6 = descstrg5[1].split('"');
-   var descstrg7 = descstrg6[1].replace("/s72-c/","/s100-c/");
    
-   field = "result"+0;
-   document.getElementById(field).textContent = '<img src="' + descstrg7 + '>';
-   field = "result"+1;
-   document.getElementById(field).textContent = descstrg3[0];
+   for (var i = 0; i < 4; i++) {
+     var descstrg2 = descstrg1[i+1].split('<title type="text">');  
+     var descstrg3 = descstrg2[1].split("</title>");
+     var descstrg4 = descstrg1[1].split("<media:thumbnail");
+     var descstrg5 = descstrg4[1].split("url=");
+     var descstrg6 = descstrg5[1].split('"');
+     var descstrg7 = descstrg6[1].replace("/s72-c/","/s100-c/");
+   
+     field = "result0"+i;
+     document.getElementById(field).textContent = '<img src="' + descstrg7 + '">';
+     field = "result1"+i;
+     document.getElementById(field).textContent = descstrg3[0];
    
    //for (var i = 0; i < 4; i++) {
      //var descstrg1 = feed.split('media:content url="');
