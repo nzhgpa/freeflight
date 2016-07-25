@@ -51,8 +51,14 @@
    var descstrg1 = feed.split("<entry>");
    var descstrg2 = descstrg1[1].split('<title type="text">');  
    var descstrg3 = descstrg2[1].split("</title>");
+   var descstrg4 = descstrg1.split("<media:thumbnail");
    
-   for (var i = 0; i < 4; i++) {
+   field = "result"+0;
+   document.getElementById(field).textContent = descstrg4[0];
+   field = "result"+1;
+   document.getElementById(field).textContent = descstrg3[0];
+   
+   //for (var i = 0; i < 4; i++) {
      //var descstrg1 = feed.split('media:content url="');
      
      //var descstrg3 = feed.split('media:thumbnail url="');
@@ -69,21 +75,21 @@
      //var descp = "NZHGPA YouTube Playlist";
       
      //sorted[i] = [Math.random(),i,link,image,descp];
-   };
+   //};
    //sorted.sort(function(a, b)
    //{
      //return a[0]-b[0].xml
    //});
-   for (var i = 1; i < 5 ; i++) {
-     field = "result"+i;
+   //for (var i = 1; i < 5 ; i++) {
+     //field = "result"+i;
      //document.getElementById(field).textContent = '<a href="' + sorted[i][2] + '" target = "_blank"><img title="' + sorted[i][4] + '" src="' + sorted[i][3] + '" width="100px"></a>';
      //document.getElementById(field).textContent = descstrg5[0]+i;
-     document.getElementById(field).textContent = descstrg3[0];
+     //document.getElementById(field).textContent = descstrg3[0];
      //if (sorted[i][1] == 0)
      //{ 
        //document.getElementById(field).setAttribute("style", "background-color: #a7a9ac;");
      //};
-   };
+   //};
  };
   gadgets.util.registerOnLoadHandler(getFeed);
   </script>
