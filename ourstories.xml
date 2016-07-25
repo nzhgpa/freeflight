@@ -52,7 +52,7 @@
      var descstrg7 = descstrg6[1].replace("/s72-c/","/s100-c/");
    
      field = "result0"+i;
-     document.getElementById(field).innerHtml = '<img src="' + descstrg7 + '">';
+     document.getElementById(field).innerHTML = '<img src="' + descstrg7 + '">';
      field = "result1"+i;
      document.getElementById(field).textContent = descstrg3[0];
    };
