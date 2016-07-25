@@ -49,10 +49,11 @@
    var field = "";
    var sorted = [];
    var descstrg1 = feed.split("<entry>");
-    
-   for (var i = 0; i < 12; i++) {
+   var descstrg2 = descstrg1[1].split('<title type="text">');  
+   
+   for (var i = 0; i < 4; i++) {
      //var descstrg1 = feed.split('media:content url="');
-     var descstrg2 = descstrg1[i+1].split('<title type="text">');
+     
      //var descstrg3 = feed.split('media:thumbnail url="');
      //var descstrg4 = descstrg3[i+1].split('"');
      //var descstrg5 = feed.split("<media:title>");
