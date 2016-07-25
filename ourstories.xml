@@ -4,7 +4,7 @@
     title_url="http://groups.google.com/group/Google-Gadgets-API" 
     scrolling="true">
   </ModulePrefs>
-  <UserPref name="num_entries" display_name="Number of Entries:" default_value="12"/>
+  <UserPref name="num_entries" display_name="Number of Entries:" default_value="8"/>
   <Content type="html">
   <![CDATA[
   <style>
@@ -19,10 +19,10 @@
   <TABLE style="background-color: #a7a9ac; vertical-align: top;width:100%;border-collapse:collapse;">
   <TR>
   <TD style="vertical-align: top;"><a href="http://nzhgpa-airborn.blogspot.co.nz/?view=magazine">Our Stories</a></TD>
-  <TD id="result00"></TD><TD id="result10" style="vertical-align: top;"></TD>
-  <TD id="result01"></TD><TD id="result11" style="vertical-align: top;"></TD>
-  <TD id="result02"></TD><TD id="result12" style="vertical-align: top;"></TD>
-  <TD id="result03"></TD><TD id="result13" style="vertical-align: top;"></TD>
+  <TD id="result0"></TD><TD id="result1"></TD>
+  <TD id="result2"></TD><TD id="result3"></TD>
+  <TD id="result4"></TD><TD id="result5"></TD>
+  <TD id="result6"></TD><TD id="result7"></TD>
   </TR>
   </TABLE>
   <script type="text/javascript">
@@ -44,7 +44,7 @@
    var sorted = [];
    var descstrg1 = feed.split("<entry>");
    
-   for (var i = 0; i < 4; i++) {
+   for (var i = 0; i < 8; i++) {
      var descstrg2 = descstrg1[i+1].split('<title type="text">');  
      var descstrg3 = descstrg2[1].split("</title>");
      var descstrg4 = descstrg1[i+1].split("<media:thumbnail");
@@ -55,10 +55,9 @@
      var descstrg9 = descstrg8[1].split('href="');
      var descstrg10 = descstrg9[1].split("#comment");
    
-     field = "result0"+i;
-     document.getElementById(field).innerHTML = '<a href="' + descstrg10[0] + '/?view=magazine"><img src="' + descstrg7 + '"></a>';
-     field = "result1"+i;
-     document.getElementById(field).textContent = descstrg3[0];
+     field = "result"+i;
+     document.getElementById(field).innerHTML = '<a href="' + descstrg10[0] + '/?view=magazine" target = "_blank"><img title="' + descstrg3[0] + '" src="' + descstrg7 + '"></a>';
+     
    };
    //for (var i = 0; i < 4; i++) {
      //var descstrg1 = feed.split('media:content url="');
