@@ -18,11 +18,11 @@
     </style>
   <TABLE style="background-color: #a7a9ac; vertical-align: top;width:100%;border-collapse:collapse;">
   <TR>
-  <TD>Our Stories</TD>
-  <TD id="result00"></TD><TD id="result10"></TD>
-  <TD id="result01"></TD><TD id="result11"></TD>
-  <TD id="result02"></TD><TD id="result12"></TD>
-  <TD id="result03"></TD><TD id="result13"></TD>
+  <TD style="vertical-align: top;">Our Stories</TD>
+  <TD id="result00"></TD><TD id="result10" style="vertical-align: top;"></TD>
+  <TD id="result01"></TD><TD id="result11" style="vertical-align: top;"></TD>
+  <TD id="result02"></TD><TD id="result12" style="vertical-align: top;"></TD>
+  <TD id="result03"></TD><TD id="result13" style="vertical-align: top;"></TD>
   </TR>
   </TABLE>
   <script type="text/javascript">
