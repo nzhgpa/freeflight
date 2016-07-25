@@ -51,7 +51,7 @@
    var descstrg1 = feed.split("<entry>");
    var descstrg2 = descstrg1[1].split('<title type="text">');  
    var descstrg3 = descstrg2[1].split("</title>");
-   var descstrg4 = descstrg1.split("<media:thumbnail");
+   var descstrg4 = descstrg1[1].split("<media:thumbnail");
    
    field = "result"+0;
    document.getElementById(field).textContent = descstrg4[0];
