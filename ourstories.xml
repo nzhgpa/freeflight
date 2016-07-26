@@ -14,10 +14,10 @@
     margin:0 auto;
   }
   h {
-    font-size: 25px;
+    font-size: 18px;
   }
   p {
-    font-size: 18px;
+    font-size: 12px;
     font-family: Verdana, sans-serif;
   }
     </style>
@@ -61,7 +61,7 @@
      var descstrg9 = descstrg8[1].split('href="');
      var descstrg10 = descstrg9[1].split("#comment");
      var descstrg11 = descstrg1[i+1].split('<content type="html">');
-     var descstrg12 = descstrg11[1].substr(0,10);
+     var descstrg12 = descstrg11[1].substr(0,71);
    
      field = "result"+i;
      document.getElementById(field).innerHTML = '<a href="' + descstrg10[0] + '/?view=magazine" target = "_blank"><img title="' + descstrg3[0] + '" src="' + descstrg7 + '"></a>';
