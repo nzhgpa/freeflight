@@ -19,7 +19,9 @@
   <TABLE style="background-color: #a7a9ac; vertical-align: top;width:100%;border-collapse:collapse;">
   <TR>
   <TD style="vertical-align: top;"><a href="http://nzhgpa-airborn.blogspot.co.nz/?view=magazine">Our Stories</a></TD>
-  <TD id="result0"></TD><TD id="result1"></TD>
+  <TD id="result0"></TD>
+    <TD><TABLE style="vertical-align: top;border-collapse:collapse;"><TR><TD id="resultA"></TD></TR><TR><TD id="resultB"></TD></TR></TABLE></TD>
+  <TD id="result1"></TD>
   <TD id="result2"></TD><TD id="result3"></TD>
   <TD id="result4"></TD><TD id="result5"></TD>
   <TD id="result6"></TD><TD id="result7"></TD>
@@ -57,6 +59,13 @@
    
      field = "result"+i;
      document.getElementById(field).innerHTML = '<a href="' + descstrg10[0] + '/?view=magazine" target = "_blank"><img title="' + descstrg3[0] + '" src="' + descstrg7 + '"></a>';
+     
+     if ( i==0 ) {
+       field = "resultA";
+       document.getElementById(field).textContent = descstrg3[0];
+       field = "resultB";
+       document.getElementById(field).textContent = descstrg3[0];
+     };
      
    };
    //for (var i = 0; i < 4; i++) {
