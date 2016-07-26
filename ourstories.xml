@@ -8,9 +8,7 @@
   <Content type="html">
   <![CDATA[
   <style>
-  td {
-    border:2px solid #a7a9ac;
-  }
+  
   img {
     display:block;
     margin:0 auto;
@@ -70,9 +68,9 @@
      
      if ( i==0 ) {
        field = "resultA";
-       document.getElementById(field).textContent = '<h>' + descstrg3[0] + '</h>';
+       document.getElementById(field).innerHTML = '<h>' + descstrg3[0] + '</h>';
        field = "resultB";
-       document.getElementById(field).textContent = '<p>' + descstrg12[0] + '</p>';
+       document.getElementById(field).innerHTML = '<p>' + descstrg12[0] + '</p>';
      };
      
    };
