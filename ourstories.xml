@@ -70,7 +70,7 @@
        field = "resultA";
        document.getElementById(field).innerHTML = '<h>' + descstrg3[0] + '</h>';
        field = "resultB";
-       document.getElementById(field).innerHTML = '<p>' + descstrg11[1] + '</p>';
+       document.getElementById(field).innerHTML = '<p>' + descstrg12 + '</p>';
      };
      
    };
