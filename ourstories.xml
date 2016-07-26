@@ -60,7 +60,7 @@
      var descstrg8 = descstrg1[i+1].split("Post Comments");
      var descstrg9 = descstrg8[1].split('href="');
      var descstrg10 = descstrg9[1].split("#comment");
-     var summ = descstrg1[i+1].indexOf('By:');
+     var summ = descstrg1[i+1].indexOf("By: ");
      var descstrg12 = descstrg1[i+1].substr(summ,71);
    
      field = "result"+i;
@@ -70,7 +70,7 @@
        field = "resultA";
        document.getElementById(field).innerHTML = '<h>' + descstrg3[0] + '</h>';
        field = "resultB";
-       document.getElementById(field).innerHTML = '<p>' + summ + '</p>';
+       document.getElementById(field).innerHTML = '<p>' + descstrg12 + '</p>';
      };
      
    };
