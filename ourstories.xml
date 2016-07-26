@@ -16,7 +16,7 @@
     margin:0 auto;
   }
     </style>
-  <TABLE style="background-color: #a7a9ac; vertical-align: top;width:100%;border-collapse:collapse;">
+  <TABLE style="background-color: #a7a9ac; vertical-align: top;width:900px;border-collapse:collapse;">
   <TR>
   <TD style="vertical-align: top;"><a href="http://nzhgpa-airborn.blogspot.co.nz/?view=magazine"><img src="https://lh3.googleusercontent.com/LcBu6gU-4KaHxuctx4Vydy2MTkKhEVkA8v61MtyUx6qeqk_1hVgHvaJUGABjabGgptkz7RKkFQSd6nhJeyjXh_95pmbtzFfTZ8wKtDx2JckzV351gUbT5hwQDRzBhK4RlERNtQ2er0pcfplVGf1wYJjz5WNwk1RjtLVFEgllKZI60oWchkW4hqhMOkobvlrWvkNuAZ3rE2Q3QScDIhMrGM0Ho_-SvqR6V-uSipdz0qqa2GvCyYVhk4jhhI_bZL33cbTddOuCstKo6L8ij5G3UBGolt-LsI1i2vIcLHRVf0aj5IK8LLnmg5IFL80G29ysWZq3CYmtrlTNthtFz-jjUdCpI3ASmVGWD0B1R0jX-mKh2IV_epdZQH-Mzw6TMGFnEaj2XJw_GXUfpVsHOqZlmQsy6VE2Kjy19KhrGnHdmBOm6F9LF-pc-RsWPlSALJUaE0ts030jFfGACRtKqKOJamMiE0-B66qaaACU1Gkn79f4pWaWTdRdE64BQN67WF4E5i6dH-PxcdxKnOYs9bx39lfKw-n2-tNF8zhvpZdHA9Gp28OdTmSzz4I1N7XRuZgJ5TpwKUPTiPhP6vn0rDSDuH9wk3sFwwo=s100-no"></a></TD>
   <TD id="result0"></TD>
@@ -24,7 +24,6 @@
   <TD id="result1"></TD>
   <TD id="result2"></TD><TD id="result3"></TD>
   <TD id="result4"></TD><TD id="result5"></TD>
-  <TD id="result6"></TD><TD id="result7"></TD>
   </TR>
   </TABLE>
   <script type="text/javascript">
