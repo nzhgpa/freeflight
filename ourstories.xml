@@ -8,7 +8,6 @@
   <Content type="html">
   <![CDATA[
   <style>
-  
   img {
     display:block;
     margin:0 auto;
@@ -22,7 +21,7 @@
     font-family: Verdana, sans-serif;
     color: #a7a9ac;
   }
-    </style>
+  </style>
   <TABLE style="vertical-align:top;width:900px;border-collapse:collapse;">
   <TR>
   <TD style="vertical-align: top;"><a href="http://nzhgpa-airborn.blogspot.co.nz/?view=magazine"><img src="http://www.nzhgpa.org.nz/ourstories.png"></a></TD>
@@ -34,14 +33,12 @@
   </TR>
   </TABLE>
   <script type="text/javascript">
-  // Get userprefs
+  
   var prefs = new gadgets.Prefs();
   var entries = prefs.getInt("num_entries");
   function getFeed() {  
     var params = {};  
     params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.TEXT;  
-    //params[gadgets.io.RequestParameters.NUM_ENTRIES] = new Number(entries);  
-    //params[gadgets.io.RequestParameters.GET_SUMMARIES] = true; 
     var url = "http://feeds.feedburner.com/nzhgpa-ourstories"; 
     gadgets.io.makeRequest(url, response, params);
   };
@@ -53,22 +50,27 @@
    var descstrg1 = feed.split("<entry>");
    
    for (var i = 0; i < 6; i++) {
+     //Get the Post Title
      var descstrg2 = descstrg1[i+1].split('<title type="text">');  
      var descstrg3 = descstrg2[1].split("</title>");
+     //Get the Post Image Thumbnail
      var descstrg4 = descstrg1[i+1].split("<media:thumbnail");
      var descstrg5 = descstrg4[1].split("url=");
      var descstrg6 = descstrg5[1].split('"');
      var descstrg7 = descstrg6[1].replace("/s72-c/","/s100-c/");
+     //Get the Blog Post URL
      var descstrg8 = descstrg1[i+1].split("Post Comments");
      var descstrg9 = descstrg8[1].split('href="');
      var descstrg10 = descstrg9[1].split("#comment");
    
+     //Display Post Thumbnail
      field = "result"+i;
      document.getElementById(field).innerHTML = '<a href="' + descstrg10[0] + '?view=magazine" target = "_blank"><img title="' + descstrg3[0] + '" src="' + descstrg7 + '"></a>';
      
      if ( i==0 ) {
+       //Display Latest Post Title
        field = "resultA";
-       document.getElementById(field).innerHTML = '<h>' + descstrg3[0] + '</h>';
+       document.getElementById(field).innerHTML = '<a href="' + descstrg10[0] + '?view=magazine" target = "_blank"><h>' + descstrg3[0] + '</h></a>';
      };
      
    };
