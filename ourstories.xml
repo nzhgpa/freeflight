@@ -64,7 +64,7 @@
      var descstrg12 = descstrg1[i+1].substr(summ,71);
    
      field = "result"+i;
-     document.getElementById(field).innerHTML = '<a href="' + descstrg10[0] + '/?view=magazine" target = "_blank"><img title="' + descstrg3[0] + '" src="' + descstrg7 + '"></a>';
+     document.getElementById(field).innerHTML = '<a href="' + descstrg10[0] + '?view=magazine" target = "_blank"><img title="' + descstrg3[0] + '" src="' + descstrg7 + '"></a>';
      
      if ( i==0 ) {
        field = "resultA";
