@@ -14,10 +14,10 @@
     margin:0 auto;
   }
   h {
-    font-size: 18px;
+    font-size: 14px;
   }
   p {
-    font-size: 12px;
+    font-size: 8px;
     font-family: Verdana, sans-serif;
   }
     </style>
