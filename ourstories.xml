@@ -68,7 +68,7 @@
        field = "resultA";
        document.getElementById(field).textContent = descstrg3[0];
        field = "resultB";
-       document.getElementById(field).textContent =  '<p>' + descstrg12[0] + </p>;
+       document.getElementById(field).textContent =  '<p>' + descstrg12[0] + '</p>';
      };
      
    };
