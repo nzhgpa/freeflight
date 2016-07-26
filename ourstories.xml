@@ -14,10 +14,10 @@
     margin:0 auto;
   }
   h {
-    font-size: 14px;
+    font-size: 18px;
   }
   p {
-    font-size: 8px;
+    font-size: 12px;
     font-family: Verdana, sans-serif;
   }
     </style>
@@ -25,7 +25,7 @@
   <TR>
   <TD style="vertical-align: top;"><a href="http://nzhgpa-airborn.blogspot.co.nz/?view=magazine"><img src="http://www.nzhgpa.org.nz/ourstories.png"></a></TD>
   <TD id="result0"></TD>
-    <TD><TABLE style="width:200px;vertical-align:top;border-collapse:collapse;border:1px solid #a7a9ac;"><TR><TD id="resultA"></TD></TR><TR><TD id="resultB"></TD></TR></TABLE></TD>
+    <TD><TABLE style="width:200px;vertical-align:top;border-collapse:collapse;"><TR><TD id="resultA"></TD></TR><TR><TD id="resultB"></TD></TR></TABLE></TD>
   <TD id="result1"></TD>
   <TD id="result2"></TD><TD id="result3"></TD>
   <TD id="result4"></TD><TD id="result5"></TD>
