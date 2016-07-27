@@ -15,14 +15,15 @@
   h {
     font-size: 14px;
     font-family: Verdana, sans-serif;
+    color: black;
   }
   p {
     font-size: 10px;
     font-family: Verdana, sans-serif;
-    color: #a7a9ac;
+    color: white;
   }
   </style>
-  <TABLE style="vertical-align:top;width:900px;border-collapse:collapse;">
+  <TABLE style="background-color: #a7a9ac;vertical-align:top;width:900px;border-collapse:collapse;">
   <TR>
   <TD style="vertical-align: top;"><a href="http://nzhgpa-airborn.blogspot.co.nz/?view=magazine" target = "_blank"><img src="http://www.nzhgpa.org.nz/ourstories.png"></a></TD>
   <TD id="result0"></TD>
