@@ -7,7 +7,6 @@
   <Content type="html">
   <![CDATA[
   
-<a href="http://www.nzhgpa.org.nz/">This is the link</a>
 <style>
 .w3-container{padding:0.01em 16px}
 .w3-content{max-width:980px;margin:auto}
@@ -22,7 +21,7 @@
 <div class="w3-container">
 <div class="w3-content w3-display-container">
 <div class="w3-display-container mySlides">
-  What is a happening?
+  <img src="https://lh3.googleusercontent.com/i7KAfXtfQDzWQ_13Cr9GsxmQ3RaJDdVPGFIi5mDxfSpvY-d4KaRhT1rCd6Zn0B_UZv3gmm0UFOwPNgjQqYnqICQxwBCzNzvJMky29nTiwJZU03Ft8OspmYYZ6Ku87jNbwmNv9S5cUh5KAFoNbdgqf6YCSvCoruPJB0FEy7S0HA-qxydF5vFE0L3AciMzD2JAgRYNwz8AlGSQtnfDdiMUkjMT26N-uZkYplxBjhv5-AdGCBiXgfae3xP9jz1qaR5qvjU0Y-zM-o37cj8hG-2xHNIJ3aYUsFcHvThiBqciqI2FqY_JqTQwJXC6iHMx2xZso-cNqmbo9rnHWE4FINu8FRhyTgjXSigZb1VBZ_wagXfwG8_AwsFtNDSZQvK9ATnLmdhdJHlpR4mGLpRMOcopbtQGc4ojPbLPf_5DJ3bWY4SZ4NL0OMNy0-argJsyllyEJKGBYXWn7WvOMflZ-u0rnH0JVOcXD-b_P3YKqtZwAx990w-dhgBCJFoVmZL-49attn9FxGXD1Re7Ez4P6PsfmZkV9AXrekdN0YbvjzJ2MFi2yUxzrapdyv9Rk10X0xUKU9OHPgoAuoBweYI6910sMouT60QJlm9Arc1pZ1FDJlTZh6Cy=w478-h358-no" style="width:100%">
   <div class="w3-display-bottomleft w3-small w3-container w3-padding-8 w3-grey w3-opacity">
 
     For once
