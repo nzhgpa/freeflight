@@ -8,6 +8,28 @@
   <![CDATA[
   
 <a href="http://www.nzhgpa.org.nz/">This is the link</a>
+<style>
+.w3-container{padding:0.01em 16px}
+.w3-content{max-width:980px;margin:auto}
+.w3-display-container{position:relative}
+.w3-display-bottomleft{position:absolute;left:0;bottom:0}
+.w3-small{font-size:12px!important}
+.w3-padding-8{padding-top:8px!important;padding-bottom:8px!important}
+.w3-grey{color:#000!important;background-color:#9e9e9e!important}
+.w3-opacity{opacity:0.60;filter:alpha(opacity=60);-webkit-backface-visibility:hidden}
+</style>
+
+<div class="w3-container">
+<div class="w3-content w3-display-container">
+<div class="w3-display-container mySlides">
+  <img src="file:///Users/shared/nzhgpa_slide1.jpg" style="width:100%">
+  <div class="w3-display-bottomleft w3-small w3-container w3-padding-8 w3-grey w3-opacity">
+
+    For once
+
+  </div>
+
+</div>
 ]]>
   </Content>
 </Module>
