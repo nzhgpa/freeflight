@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs title="Vimeo Feed" 
+    title_url="http://groups.google.com/group/Google-Gadgets-API" 
+    scrolling="true">
+  </ModulePrefs>
+  <UserPref name="num_entries" display_name="Number of Entries:" default_value="12"/>
+  <Content type="html">
+  <![CDATA[
+
+  <style>
+  td {
+    border:2px solid #a7a9ac;
+  }
+  img {
+    display:block;
+    margin:0 auto;
+  }
+    </style>
+
+  <TABLE style="background-color: #a7a9ac; vertical-align: top;height:398px;width:340px;border-collapse:collapse;">
+  <TR>
+  <TD id="result0" style="background-color: white;" colspan="2"></TD><TD id="result1" style="background-color: white;" colspan="2"></TD><TD id="result2" style="background-color: white;" colspan="2"></TD>
+  </TR><TR>
+  <TD id="result3" style="background-color: white;" colspan="2"></TD><TD id="result4" style="background-color: white;" colspan="2"></TD><TD id="result5" style="background-color: white;" colspan="2"></TD>
+  </TR><TR>
+  <TD id="result6" style="background-color: white;" colspan="2"></TD><TD id="result7" style="background-color: white;" colspan="2"></TD><TD id="result8" style="background-color: white;" colspan="2"></TD>
+  </TR><TR>
+  <TD id="result9" style="background-color: white;" colspan="2"></TD><TD id="result10" style="background-color: white;" colspan="2"></TD><TD id="result11" style="background-color: white;" colspan="2"></TD>
+  </TR>
+  <TR>
+  <TD style="font-family: Arial, san serif; font-size: 14px;" colspan="3"><b>nzhgpa</b><b style="color:grey;">YouTube</b></TD>
+  <TD style="text-align: right; font-size: 14px;" colspan="3"><a href="http://www.youtube.com/c/NZHGPA" style="color: white;" target="_blank"><i>This is what we do &gt;&gt;</i></a></TD>
+  </TR>
+  </TABLE>
+
+  <script type="text/javascript">
+
+  // Get userprefs
+  var prefs = new gadgets.Prefs();
+  var entries = prefs.getInt("num_entries");
+
+  function getFeed() {  
+    var params = {};  
+    params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.TEXT;  
+    //params[gadgets.io.RequestParameters.NUM_ENTRIES] = new Number(entries);  
+    //params[gadgets.io.RequestParameters.GET_SUMMARIES] = true; 
+    //var url = "http://www.nzhgpa.org.nz"; 
+    //var url = "http://feeds.feedburner.com/Vimeo/Nzhgpa"; 
+    //var url = "http://feeds.feedburner.com/youtube/sIgl"; 
+    var url = "https://www.youtube.com/feeds/videos.xml?playlist_id=PLpVYLDpbv9r6F9ykRsswRl2gXUEOYl35Y";
+    gadgets.io.makeRequest(url, response, params);
+  };
+
+ function response(obj) { 
+   // obj.data contains the feed data
+   var feed = obj.text;
+   var field = "";
+   var sorted = [];
+    
+   for (var i = 0; i < 12; i++) {
+     var descstrg1 = feed.split('media:content url="');
+     var descstrg2 = descstrg1[i+1].split("/>");
+     var descstrg3 = feed.split('media:thumbnail url="');
+     var descstrg4 = descstrg3[i+1].split('"');
+     var descstrg5 = feed.split("<media:title>");
+     var descstrg6 = descstrg5[i+1].split("</media:title>");
+     
+     var link = descstrg2[0];
+     var image = descstrg4[0];        
+     var descp = descstrg6[0];
+  
+     //var link = "http://www.youtube.com/playlist?list=PLpVYLDpbv9r6F9ykRsswRl2gXUEOYl35Y";
+     //var image = "http://www.nzhgpa.org.nz/_/rsrc/1365502452864/config/customLogo.gif?revision=9";        
+     //var descp = "NZHGPA YouTube Playlist";
+      
+     sorted[i] = [Math.random(),i,link,image,descp];
+   };
+   sorted.sort(function(a, b)
+   {
+     return a[0]-b[0].xml
+   });
+
+   for (var i = 0; i < 12 ; i++) {
+     field = "result"+i;
+     //document.getElementById(field).textContent = '<a href="' + sorted[i][2] + '" target = "_blank"><img title="' + sorted[i][4] + '" src="' + sorted[i][3] + '" width="100px"></a>';
+     //document.getElementById(field).textContent = descstrg5[0]+i;
+     document.getElementById(field).innerHTML = '<a href="' + sorted[i][2] + '" target = "_blank"><img title="' + sorted[i][4] + '" src="' + sorted[i][3] + '" width="100px"></a>';
+     if (sorted[i][1] == 0)
+     { 
+       document.getElementById(field).setAttribute("style", "background-color: #a7a9ac;");
+     };
+   };
+ };
+  gadgets.util.registerOnLoadHandler(getFeed);
+  </script>
+  ]]>
+  </Content>
+</Module>
