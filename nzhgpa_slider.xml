@@ -7,78 +7,7 @@
   <Content type="html">
   <![CDATA[
   
-  <div class="w3-container">
-    <div class="w3-content w3-display-container">
-      <div class="w3-display-container mySlides">
-        <img src="file:///Users/shared/nzhgpa_slide1.jpg" style="width:100%">
-        <div class="w3-display-bottomleft w3-small w3-container w3-padding-8 w3-grey w3-opacity">
-          For once
-        </div>
-      </div>
-      <div class="w3-display-container mySlides">
-        <img src="file:///Users/shared/nzhgpa_slide2.jpg" style="width:100%">
-        <div class="w3-display-bottomleft w3-small w3-container w3-padding-8 w3-grey w3-opacity">
-          you have 
-        </div>
-      </div>
-      <div class="w3-display-container mySlides">
-        <img src="file:///Users/shared/nzhgpa_slide3.jpg" style="width:100%">
-        <div class="w3-display-bottomleft w3-small w3-container w3-padding-8 w3-grey w3-opacity">
-          tasted flight 
-        </div>
-      </div>
-      <div class="w3-display-container mySlides">
-        <img src="file:///Users/shared/nzhgpa_slide4.jpg" style="width:100%">
-        <div class="w3-display-bottomleft w3-small w3-container w3-padding-8 w3-grey w3-opacity">
-          you will 
-        </div>
-      </div>
-      <div class="w3-display-container mySlides">
-        <img src="file:///Users/shared/nzhgpa_slide5.jpg" style="width:100%">
-        <div class="w3-display-bottomleft w3-small w3-container w3-padding-8 w3-grey w3-opacity">
-          walk the earth 
-        </div>
-      </div>
-<div class="w3-display-container mySlides">
-<img src="file:///Users/shared/nzhgpa_slide6.jpg" style="width:100%">
-<div class="w3-display-bottomleft w3-small w3-container w3-padding-8 w3-grey w3-opacity">
-with your eyes 
-</div>
-</div>
-<div class="w3-display-container mySlides">
-<img src="file:///Users/shared/nzhgpa_slide7.jpg" style="width:100%">
-<div class="w3-display-bottomleft w3-small w3-container w3-padding-8 w3-grey w3-opacity">
-turned skywards, 
-</div>
-</div>
-<div class="w3-display-container mySlides">
-<img src="file:///Users/shared/nzhgpa_slide8.jpg" style="width:100%">
-<div class="w3-display-bottomleft w3-small w3-container w3-padding-8 w3-grey w3-opacity">
-for there you have been 
-</div>
-</div>
-<div class="w3-display-container mySlides">
-<img src="file:///Users/shared/nzhgpa_slide9.jpg" style="width:100%">
-<div class="w3-display-bottomleft w3-small w3-container w3-padding-8 w3-grey w3-opacity">
-and there you will long to return.
-</div>
-</div>
-</div>
-<script>
-var myIndex = 0;
-carousel();
-function carousel() {
-var i;
-var x = document.getElementsByClassName("mySlides");
-for (i = 0; i < x.length; i++) {
-x[i].style.display = "none";
-}
-myIndex++;
-if (myIndex > x.length) {myIndex = 1}
-x[myIndex-1].style.display = "block";
-setTimeout(carousel, 5000); 
-}
-</script>
+<a href="http://www.nzhgpa.org.nz/">This is the link</a>
 ]]>
   </Content>
 </Module>
