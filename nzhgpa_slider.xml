@@ -6,9 +6,7 @@
   </ModulePrefs>
   <Content type="html">
   <![CDATA[
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-
+  
   <div class="w3-container">
     <div class="w3-content w3-display-container">
       <div class="w3-display-container mySlides">
