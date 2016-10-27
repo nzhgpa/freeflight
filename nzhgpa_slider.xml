@@ -8,7 +8,7 @@
   <![CDATA[
   
 <style>
-.w3-container{padding:0.01em 16px}
+.w3-container{padding:0.01em 0px}
 .w3-content{max-width:980px;margin:auto}
 .w3-display-container{position:relative}
 .w3-display-bottomleft{position:absolute;left:0;bottom:0}
