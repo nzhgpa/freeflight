@@ -13,74 +13,73 @@
 .w3-display-container{position:relative}
 .w3-display-bottomleft{position:absolute;left:0;bottom:0}
 .w3-small{font-size:12px!important}
-.w3-padding-8{padding-top:8px!important;padding-bottom:8px!important}
+.w3-padding-12{padding-top:12px!important;padding-bottom:12px!important}
 .w3-grey{color:#000!important;background-color:#9e9e9e!important}
 .w3-opacity{opacity:0.60;filter:alpha(opacity=60);-webkit-backface-visibility:hidden}
-.w3-border{border:1px solid #ccc!important}
-.w3-border-black{border-color:#000!important}
+
 </style>
 
 <div class="w3-container">
   <div class="w3-content w3-display-container">
     <div class="w3-display-container mySlides">
       <img src="http://www.nzhgpa.org.nz/nzhgpa_slide1.jpg" style="width:100%">
-      <div class="w3-display-bottomleft w3-small w3-container w3-padding-8 w3-grey w3-opacity">
+      <div class="w3-display-bottomleft w3-small w3-container w3-padding-12 w3-grey w3-opacity">
         For once
       </div>
     </div>
 
     <div class="w3-display-container mySlides">
       <img src="http://www.nzhgpa.org.nz/nzhgpa_slide2.jpg" style="width:100%">
-      <div class="w3-display-bottomleft w3-small w3-container w3-padding-8 w3-grey w3-opacity">
+      <div class="w3-display-bottomleft w3-small w3-container w3-padding-12 w3-grey w3-opacity">
         you have 
       </div>
     </div>
 
     <div class="w3-display-container mySlides">
       <img src="http://www.nzhgpa.org.nz/nzhgpa_slide3.jpg" style="width:100%">
-      <div class="w3-display-bottomleft w3-small w3-container w3-padding-8 w3-grey w3-opacity">
+      <div class="w3-display-bottomleft w3-small w3-container w3-padding-12 w3-grey w3-opacity">
         tasted flight 
       </div>
     </div>
 
     <div class="w3-display-container mySlides">
       <img src="http://www.nzhgpa.org.nz/nzhgpa_slide4.jpg" style="width:100%">
-      <div class="w3-display-bottomleft w3-small w3-container w3-padding-8 w3-grey w3-opacity">
+      <div class="w3-display-bottomleft w3-small w3-container w3-padding-12 w3-grey w3-opacity">
         you will 
       </div>
     </div>
 
     <div class="w3-display-container mySlides">
       <img src="http://www.nzhgpa.org.nz/nzhgpa_slide5.jpg" style="width:100%">
-      <div class="w3-display-bottomleft w3-small w3-container w3-padding-8 w3-grey w3-opacity">
+      <div class="w3-display-bottomleft w3-small w3-container w3-padding-12 w3-grey w3-opacity">
         walk the earth 
       </div>
     </div>
 
     <div class="w3-display-container mySlides">
       <img src="http://www.nzhgpa.org.nz/nzhgpa_slide6.jpg" style="width:100%">
-      <div class="w3-display-bottomleft w3-small w3-container w3-padding-8 w3-grey w3-opacity">
+      <div class="w3-display-bottomleft w3-small w3-container w3-padding-12 w3-grey w3-opacity">
         with your eyes 
       </div>
     </div>
 
     <div class="w3-display-container mySlides">
       <img src="http://www.nzhgpa.org.nz/nzhgpa_slide7.jpg" style="width:100%">
-      <div class="w3-display-bottomleft w3-small w3-container w3-padding-8 w3-grey w3-opacity">
+      <div class="w3-display-bottomleft w3-small w3-container w3-padding-12 w3-grey w3-opacity">
         turned skywards, 
       </div>
     </div>
 
     <div class="w3-display-container mySlides">
       <img src="http://www.nzhgpa.org.nz/nzhgpa_slide8.jpg" style="width:100%">
-      <div class="w3-display-bottomleft w3-small w3-container w3-padding-8 w3-grey w3-opacity">
+      <div class="w3-display-bottomleft w3-small w3-container w3-padding-12 w3-grey w3-opacity">
         for there you have been 
       </div>
     </div>
 
     <div class="w3-display-container mySlides">
       <img src="http://www.nzhgpa.org.nz/nzhgpa_slide9.jpg" style="width:100%">
-      <div class="w3-display-bottomleft w3-small w3-container w3-padding-8 w3-grey w3-opacity">
+      <div class="w3-display-bottomleft w3-small w3-container w3-padding-12 w3-grey w3-opacity">
         and there you will long to return.
       </div>
     </div>
